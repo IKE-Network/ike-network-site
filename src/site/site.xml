@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright 2025-2026 IKE Community
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+<site xmlns="http://maven.apache.org/SITE/2.0.0"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://maven.apache.org/SITE/2.0.0
+      https://maven.apache.org/xsd/site-2.0.0.xsd"
+      name="IKE Network">
+
+    <skin>
+        <groupId>org.sentrysoftware.maven</groupId>
+        <artifactId>sentry-maven-skin</artifactId>
+        <version>7.0.00</version>
+    </skin>
+
+    <custom>
+        <bodyClass>sentry-green</bodyClass>
+        <checkImageLinks>false</checkImageLinks>
+        <convertImagesToWebp>false</convertImagesToWebp>
+        <convertImagesToThumbnails>false</convertImagesToThumbnails>
+        <setExplicitImageSize>false</setExplicitImageSize>
+        <keywords>IKE, knowledge engineering, integrated knowledge environment,
+                   IKE Community, IKE Network, ike-tooling, ike-platform,
+                   ike-docs, ike-example-ws, example-project, doc-example</keywords>
+    </custom>
+
+    <bannerLeft name="IKE Network" href="index.html">
+        <image src="images/ike-logo.svg" alt="IKE"/>
+    </bannerLeft>
+
+    <bannerRight name="GitHub &lt;i class='fa-brands fa-github'&gt;&lt;/i&gt;"
+        href="https://github.com/IKE-Network"/>
+
+    <publishDate format="yyyy-MM-dd"/>
+
+    <body>
+        <breadcrumbs>
+            <item name="IKE" href="index.html"/>
+        </breadcrumbs>
+
+        <links>
+            <item name="GitHub" href="https://github.com/IKE-Network"/>
+            <item name="Issues" href="https://github.com/IKE-Network/ike-issues"/>
+        </links>
+
+        <menu name="IKE Network">
+            <item name="Home" href="index.html"/>
+        </menu>
+
+        <menu name="Tooling">
+            <item name="IKE Tooling"
+                  href="https://ike.network/ike-tooling/"/>
+            <item name="IKE Docs"
+                  href="https://ike.network/ike-docs/"/>
+        </menu>
+
+        <menu name="Platform">
+            <item name="IKE Platform"
+                  href="https://ike.network/ike-platform/"/>
+        </menu>
+
+        <menu name="Reference Projects">
+            <item name="example-project"
+                  href="https://ike.network/example-project/"/>
+            <item name="doc-example"
+                  href="https://ike.network/doc-example/"/>
+            <item name="ike-example-ws"
+                  href="https://ike.network/ike-example-ws/"/>
+        </menu>
+
+        <menu name="Source">
+            <item name="ike-tooling"
+                  href="https://github.com/IKE-Network/ike-tooling"/>
+            <item name="ike-docs"
+                  href="https://github.com/IKE-Network/ike-docs"/>
+            <item name="ike-platform"
+                  href="https://github.com/IKE-Network/ike-platform"/>
+            <item name="example-project"
+                  href="https://github.com/IKE-Network/example-project"/>
+            <item name="doc-example"
+                  href="https://github.com/IKE-Network/doc-example"/>
+            <item name="ike-example-ws"
+                  href="https://github.com/IKE-Network/ike-example-ws"/>
+        </menu>
+    </body>
+</site>

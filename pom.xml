@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright 2025-2026 IKE Community
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+<project xmlns="http://maven.apache.org/POM/4.1.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.1.0
+         https://maven.apache.org/xsd/maven-4.1.0.xsd">
+    <modelVersion>4.1.0</modelVersion>
+
+    <groupId>network.ike</groupId>
+    <artifactId>ike-network-site</artifactId>
+    <version>1</version>
+    <packaging>pom</packaging>
+
+    <name>IKE Network</name>
+    <description>Organization landing page for IKE Community projects.</description>
+    <url>https://ike.network</url>
+
+    <organization>
+        <name>IKE Community</name>
+        <url>https://ike.network</url>
+    </organization>
+
+    <licenses>
+        <license>
+            <name>Apache License, Version 2.0</name>
+            <url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    </properties>
+
+    <build>
+        <plugins>
+            <!-- Maven Site Plugin — generates the org landing page.
+                 The asciidoctor-parser-doxia-module dependency lets
+                 maven-site-plugin render src/site/asciidoc/*.adoc
+                 directly at site:site time. -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-site-plugin</artifactId>
+                <version>3.21.0</version>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.sentrysoftware.maven</groupId>
+                        <artifactId>maven-skin-tools</artifactId>
+                        <version>1.7.00</version>
+                        <exclusions>
+                            <exclusion>
+                                <groupId>org.graalvm.js</groupId>
+                                <artifactId>js</artifactId>
+                            </exclusion>
+                        </exclusions>
+                    </dependency>
+                    <dependency>
+                        <groupId>org.graalvm.polyglot</groupId>
+                        <artifactId>polyglot</artifactId>
+                        <version>25.0.2</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>org.graalvm.polyglot</groupId>
+                        <artifactId>js</artifactId>
+                        <version>25.0.2</version>
+                        <type>pom</type>
+                    </dependency>
+                    <dependency>
+                        <groupId>org.asciidoctor</groupId>
+                        <artifactId>asciidoctor-parser-doxia-module</artifactId>
+                        <version>3.2.0</version>
+                    </dependency>
+                </dependencies>
+            </plugin>
+        </plugins>
+    </build>
+</project>
