@@ -5,11 +5,11 @@
 // project-version: 165
 // project-url: https://ike.network/ike-tooling/
 // github-url: https://github.com/IKE-Network/ike-tooling
-// registered: 2026-05-12T20:06:13.234387Z
+// registered: 2026-05-12T20:07:45.405389Z
 
 = IKE Tooling
 
-Build tooling for IKE Network projects
+Workspace management, release orchestration, gitflow workflows, and build-time utilities for IKE Network projects.
 
 [cols="1,2",options="autowidth"]
 |===
