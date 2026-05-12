@@ -2,16 +2,16 @@
 // Managed by ike:register-site — do not edit manually.
 //
 // project-id: ike-tooling
-// project-version: 161
+// project-version: 163
 // project-url: https://ike.network/ike-tooling/
 // github-url: https://github.com/IKE-Network/ike-tooling
-// registered: 2026-05-12T15:20:22.835686Z
+// registered: 2026-05-12T15:53:36.526516Z
 
 = null
 
 [cols="1,2",options="autowidth"]
 |===
-| Version | 161
+| Version | 163
 | Site | https://ike.network/ike-tooling/[ike.network/ike-tooling]
 | GitHub | https://github.com/IKE-Network/ike-tooling[IKE-Network/ike-tooling]
 |===
