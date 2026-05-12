@@ -6,5 +6,7 @@ platform for knowledge engineering.
 
 == Projects
 
+include::../../../projects/ike-docs.adoc[leveloffset=+1]
+
 include::../../../projects/ike-tooling.adoc[leveloffset=+1]
 

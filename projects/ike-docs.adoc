@@ -1,0 +1,26 @@
+// IKE Project Registration Fragment
+// Managed by ike:register-site — do not edit manually.
+//
+// project-id: ike-docs
+// project-version: 22
+// project-url: https://ike.network/ike-docs/
+// github-url: https://github.com/IKE-Network/ike-docs
+// registered: 2026-05-12T19:37:10.787029Z
+
+= null
+
+[cols="1,2",options="autowidth"]
+|===
+| Version | 22
+| Site | https://ike.network/ike-docs/[ike.network/ike-docs]
+| GitHub | https://github.com/IKE-Network/ike-docs[IKE-Network/ike-docs]
+|===
+
+=== Modules
+
+* ike-doc-resources
+* minimal-fonts
+* docbook-xsl
+* koncept-asciidoc-extension
+* ike-doc-maven-plugin
+* semantic-linebreak
