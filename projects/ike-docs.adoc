@@ -2,16 +2,18 @@
 // Managed by ike:register-site — do not edit manually.
 //
 // project-id: ike-docs
-// project-version: 23
+// project-version: 22
 // project-url: https://ike.network/ike-docs/
 // github-url: https://github.com/IKE-Network/ike-docs
-// registered: 2026-05-12T20:04:48.237267Z
+// registered: 2026-05-12T20:08:26.820706Z
 
-= null
+= IKE Docs
+
+Documentation plumbing for the IKE Network. Hosts the ike-doc-maven-plugin (ike-doc packaging, AsciiDoc/render pipeline, PDF dispatch), the Koncept AsciiDoc extension, DocBook XSL + fonts, shared doc resources, and the semantic linebreak reformatter. Split from ike-pipeline to resolve the extensions=true reactor-load cycle. See IKE-Network/ike-issues#216.
 
 [cols="1,2",options="autowidth"]
 |===
-| Version | 23
+| Version | 22
 | Site | https://ike.network/ike-docs/[ike.network/ike-docs]
 | GitHub | https://github.com/IKE-Network/ike-docs[IKE-Network/ike-docs]
 |===
