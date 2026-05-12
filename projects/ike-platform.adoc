@@ -1,0 +1,23 @@
+// IKE Project Registration Fragment
+// Managed by ike:register-site — do not edit manually.
+//
+// project-id: ike-platform
+// project-version: 44
+// project-url: https://ike.network/ike-platform/
+// github-url: https://github.com/IKE-Network/ike-platform
+// registered: 2026-05-12T19:55:48.123627Z
+
+= null
+
+[cols="1,2",options="autowidth"]
+|===
+| Version | 44
+| Site | https://ike.network/ike-platform/[ike.network/ike-platform]
+| GitHub | https://github.com/IKE-Network/ike-platform[IKE-Network/ike-platform]
+|===
+
+=== Modules
+
+* ike-parent
+* ike-workspace-maven-plugin
+* ike-bom
