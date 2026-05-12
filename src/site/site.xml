@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  ~ Copyright 2025-2026 IKE Community
+  ~ Copyright 2026 IKE Network
   ~
   ~ Licensed under the Apache License, Version 2.0 (the "License");
   ~ you may not use this file except in compliance with the License.
@@ -33,7 +33,7 @@
         <convertImagesToThumbnails>false</convertImagesToThumbnails>
         <setExplicitImageSize>false</setExplicitImageSize>
         <keywords>IKE, knowledge engineering, integrated knowledge environment,
-                   IKE Community, IKE Network, ike-tooling, ike-platform,
+                   IKE Network, ike-tooling, ike-platform,
                    ike-docs, ike-example-ws, example-project, doc-example</keywords>
     </custom>
 

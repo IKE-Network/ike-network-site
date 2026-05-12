@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  ~ Copyright 2025-2026 IKE Community
+  ~ Copyright 2026 IKE Network
   ~
   ~ Licensed under the Apache License, Version 2.0 (the "License");
   ~ you may not use this file except in compliance with the License.
@@ -26,11 +26,12 @@
     <packaging>pom</packaging>
 
     <name>IKE Network</name>
-    <description>Organization landing page for IKE Community projects.</description>
+    <description>Organization landing page for IKE Network projects.</description>
     <url>https://ike.network</url>
+    <inceptionYear>2026</inceptionYear>
 
     <organization>
-        <name>IKE Community</name>
+        <name>IKE Network</name>
         <url>https://ike.network</url>
     </organization>
 
@@ -45,6 +46,13 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <!-- Reproducible-build timestamp stamped into the rendered
+             footer ("Documentation as of …"). Bump on every meaningful
+             content update so visitors see a current date. Without
+             this, maven-site-plugin's site descriptor inheritance
+             leaves the placeholder unresolved and the skin falls back
+             to the 1980-02-01 epoch default. ike-issues#366. -->
+        <project.build.outputTimestamp>2026-05-11T00:00:00Z</project.build.outputTimestamp>
     </properties>
 
     <build>
