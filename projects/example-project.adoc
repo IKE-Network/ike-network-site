@@ -2,10 +2,10 @@
 // Managed by ike:register-site — do not edit manually.
 //
 // project-id: example-project
-// project-version: 26
+// project-version: 27
 // project-url: https://ike.network/example-project/
 // github-url: https://github.com/IKE-Network/example-project
-// registered: 2026-05-13T05:44:14.362583Z
+// registered: 2026-05-13T14:36:14.262741Z
 
 = IKE Example Project
 
@@ -13,7 +13,7 @@ Example Java project demonstrating IKE documentation pipeline integration with J
 
 [cols="1,2",options="autowidth"]
 |===
-| Version | 26
+| Version | 27
 | Site | https://ike.network/example-project/[ike.network/example-project]
 | GitHub | https://github.com/IKE-Network/example-project[IKE-Network/example-project]
 |===
