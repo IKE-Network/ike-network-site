@@ -2,10 +2,10 @@
 // Managed by ike:register-site — do not edit manually.
 //
 // project-id: ike-example-its
-// project-version: 17
+// project-version: 18
 // project-url: https://ike.network/ike-example-its/
 // github-url: https://github.com/IKE-Network/ike-example-its
-// registered: 2026-05-13T04:50:10.364163Z
+// registered: 2026-05-13T05:45:29.103856Z
 
 = IKE Example Integration Test Harness
 
@@ -13,7 +13,7 @@ End-to-end smoke tests that exercise the IKE Network release cascade as external
 
 [cols="1,2",options="autowidth"]
 |===
-| Version | 17
+| Version | 18
 | Site | https://ike.network/ike-example-its/[ike.network/ike-example-its]
 | GitHub | https://github.com/IKE-Network/ike-example-its[IKE-Network/ike-example-its]
 |===
