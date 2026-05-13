@@ -8,6 +8,8 @@ platform for knowledge engineering.
 
 include::../../../projects/doc-example.adoc[leveloffset=+1]
 
+include::../../../projects/example-project.adoc[leveloffset=+1]
+
 include::../../../projects/ike-docs.adoc[leveloffset=+1]
 
 include::../../../projects/ike-platform.adoc[leveloffset=+1]
