@@ -2,10 +2,10 @@
 // Managed by ike:register-site — do not edit manually.
 //
 // project-id: ike-docs
-// project-version: 28
+// project-version: 29
 // project-url: https://ike.network/ike-docs/
 // github-url: https://github.com/IKE-Network/ike-docs
-// registered: 2026-05-13T05:30:45.540141Z
+// registered: 2026-05-13T14:08:48.510408Z
 
 = IKE Docs
 
@@ -13,7 +13,7 @@ Documentation plumbing for the IKE Network. Hosts the ike-doc-maven-plugin (ike-
 
 [cols="1,2",options="autowidth"]
 |===
-| Version | 28
+| Version | 29
 | Site | https://ike.network/ike-docs/[ike.network/ike-docs]
 | GitHub | https://github.com/IKE-Network/ike-docs[IKE-Network/ike-docs]
 |===
