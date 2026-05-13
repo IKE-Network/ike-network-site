@@ -1,8 +1,8 @@
 = IKE Network
 :icons: font
 
-The IKE Network (Integrated Knowledge Exchange) is a sociotechnical
-fabric where knowledge compounds.
+The Integrated Knowledge Environment (IKE) is a community-driven
+platform for knowledge engineering.
 
 == Projects
 
