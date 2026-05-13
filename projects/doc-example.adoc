@@ -2,10 +2,10 @@
 // Managed by ike:register-site — do not edit manually.
 //
 // project-id: doc-example
-// project-version: 26
+// project-version: 27
 // project-url: https://ike.network/doc-example/
 // github-url: https://github.com/IKE-Network/doc-example
-// registered: 2026-05-13T05:42:33.079429Z
+// registered: 2026-05-13T14:34:23.011546Z
 
 = IKE Documentation Example
 
@@ -13,7 +13,7 @@ Documentation-only project demonstrating the IKE AsciiDoc pipeline. Exercises al
 
 [cols="1,2",options="autowidth"]
 |===
-| Version | 26
+| Version | 27
 | Site | https://ike.network/doc-example/[ike.network/doc-example]
 | GitHub | https://github.com/IKE-Network/doc-example[IKE-Network/doc-example]
 |===
