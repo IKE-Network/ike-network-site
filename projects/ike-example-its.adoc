@@ -1,0 +1,19 @@
+// IKE Project Registration Fragment
+// Managed by ike:register-site — do not edit manually.
+//
+// project-id: ike-example-its
+// project-version: 12
+// project-url: https://ike.network/ike-example-its/
+// github-url: https://github.com/IKE-Network/ike-example-its
+// registered: 2026-05-13T01:14:06.495201Z
+
+= IKE Example Integration Test Harness
+
+End-to-end smoke tests that exercise the IKE Network release cascade as external consumers would. Each IT case clones the intended usage pattern (doc-only project, java + docs, BOM import, ws:create scaffold) in a fresh Maven environment and asserts that the build succeeds and produces the expected artifacts.
+
+[cols="1,2",options="autowidth"]
+|===
+| Version | 12
+| Site | https://ike.network/ike-example-its/[ike.network/ike-example-its]
+| GitHub | https://github.com/IKE-Network/ike-example-its[IKE-Network/ike-example-its]
+|===
