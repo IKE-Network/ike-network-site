@@ -2,16 +2,16 @@
 // Managed by ike:register-site — do not edit manually.
 //
 // project-id: ike-example-ws
-// project-version: 18
+// project-version: 19
 // project-url: https://ike.network/ike-example-ws/
 // github-url: https://github.com/IKE-Network/ike-example-ws
-// registered: 2026-05-13T14:39:18.831247Z
+// registered: 2026-05-13T17:05:15.158907Z
 
 = IKE Example Workspace
 
 [cols="1,2",options="autowidth"]
 |===
-| Version | 18
+| Version | 19
 | Site | https://ike.network/ike-example-ws/[ike.network/ike-example-ws]
 | GitHub | https://github.com/IKE-Network/ike-example-ws[IKE-Network/ike-example-ws]
 |===
