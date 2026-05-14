@@ -2,10 +2,10 @@
 // Managed by ike:register-site — do not edit manually.
 //
 // project-id: ike-tooling
-// project-version: 172
+// project-version: 173
 // project-url: https://ike.network/ike-tooling/
 // github-url: https://github.com/IKE-Network/ike-tooling
-// registered: 2026-05-13T16:44:29.663894Z
+// registered: 2026-05-14T00:17:28.431564Z
 
 = IKE Tooling
 
@@ -13,7 +13,7 @@ Workspace management, release orchestration, gitflow workflows, and build-time u
 
 [cols="1,2",options="autowidth"]
 |===
-| Version | 172
+| Version | 173
 | Site | https://ike.network/ike-tooling/[ike.network/ike-tooling]
 | GitHub | https://github.com/IKE-Network/ike-tooling[IKE-Network/ike-tooling]
 |===
