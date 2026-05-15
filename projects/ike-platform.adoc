@@ -1,19 +1,25 @@
 // IKE Project Registration Fragment
-// Managed by ike:register-site — do not edit manually.
+// Managed by ike:site-publish — do not edit manually.
 //
 // project-id: ike-platform
-// project-version: 57
+// project-version: 58
 // project-url: https://ike.network/ike-platform/
 // github-url: https://github.com/IKE-Network/ike-platform
-// registered: 2026-05-14T00:29:33.222372Z
+// registered: 2026-05-15T05:52:35.189788Z
 
 = IKE Platform
 
-Consumer-facing parent POM, BOM, and workspace management plugin for the IKE Network. External doc and code projects inherit from ike-parent (declared here); cross-repo workspace operations use ike-workspace-maven-plugin (ws:* goals). Consumes ike-docs as an external artifact — ike-parent declares ike-doc-maven-plugin with extensions=true, resolving from Nexus at project-load time. Split from the archived ike-pipeline; see IKE-Network/ike-issues#216.
+Consumer-facing parent POM, BOM, and workspace management plugin
+        for the IKE Network. External doc and code projects inherit
+        from ike-parent (declared here); cross-repo workspace operations
+        use ike-workspace-maven-plugin (ws:* goals). Consumes ike-docs
+        as an external artifact — ike-parent declares ike-doc-maven-plugin
+        with extensions=true, resolving from Nexus at project-load time.
+        Split from the archived ike-pipeline; see IKE-Network/ike-issues#216.
 
 [cols="1,2",options="autowidth"]
 |===
-| Version | 57
+| Version | 58
 | Site | https://ike.network/ike-platform/[ike.network/ike-platform]
 | GitHub | https://github.com/IKE-Network/ike-platform[IKE-Network/ike-platform]
 |===
