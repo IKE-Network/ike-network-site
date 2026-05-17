@@ -1,19 +1,21 @@
 // IKE Project Registration Fragment
-// Managed by ike:register-site — do not edit manually.
+// Managed by ike:site-publish — do not edit manually.
 //
 // project-id: doc-example
-// project-version: 29
+// project-version: 30
 // project-url: https://ike.network/doc-example/
 // github-url: https://github.com/IKE-Network/doc-example
-// registered: 2026-05-14T00:32:56.592175Z
+// registered: 2026-05-17T22:19:16.871765Z
 
 = IKE Documentation Example
 
-Documentation-only project demonstrating the IKE AsciiDoc pipeline. Exercises all diagram types, Koncept macros, typography, and layout features across all 6 PDF renderers.
+Documentation-only project demonstrating the IKE AsciiDoc pipeline.
+        Exercises all diagram types, Koncept macros, typography, and layout
+        features across all 6 PDF renderers.
 
 [cols="1,2",options="autowidth"]
 |===
-| Version | 29
+| Version | 30
 | Site | https://ike.network/doc-example/[ike.network/doc-example]
 | GitHub | https://github.com/IKE-Network/doc-example[IKE-Network/doc-example]
 |===
