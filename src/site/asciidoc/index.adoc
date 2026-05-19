@@ -4,34 +4,21 @@
 The IKE Network (Integrated Knowledge Exchange) is a sociotechnical
 fabric where knowledge compounds.
 
-== Foundation
-
-The IKE foundation — published to Maven Central and
-inheritable by any project. Each layer builds on the
-one above it.
-
-include::../../../projects/ike-base-parent.adoc[leveloffset=+1]
-
-include::../../../projects/ike-tooling.adoc[leveloffset=+1]
-
-include::../../../projects/ike-docs.adoc[leveloffset=+1]
-
-include::../../../projects/ike-platform.adoc[leveloffset=+1]
-
-== Examples
-
-Reference projects that show how to consume the IKE
-foundation. They are deliberately *not* published to
-Maven Central: they are worked examples to read and
-copy, not libraries to depend on. Publishing them as
-artifacts would invite accidental coupling to code
-that exists only to illustrate a pattern.
+== Projects
 
 include::../../../projects/doc-example.adoc[leveloffset=+1]
 
 include::../../../projects/example-project.adoc[leveloffset=+1]
 
+include::../../../projects/ike-base-parent.adoc[leveloffset=+1]
+
+include::../../../projects/ike-docs.adoc[leveloffset=+1]
+
 include::../../../projects/ike-example-its.adoc[leveloffset=+1]
 
 include::../../../projects/ike-example-ws.adoc[leveloffset=+1]
+
+include::../../../projects/ike-platform.adoc[leveloffset=+1]
+
+include::../../../projects/ike-tooling.adoc[leveloffset=+1]
 
