@@ -2,14 +2,12 @@
 // Managed by ike:site-publish — do not edit manually.
 //
 // project-id: ike-platform
-// project-version: 72
+// project-version: 73
 // project-url: https://ike.network/ike-platform/
 // github-url: https://github.com/IKE-Network/ike-platform
-// registered: 2026-05-19T15:33:07.045713Z
+// registered: 2026-05-19T22:09:28.493869Z
 
 = IKE Platform
-
-image:https://img.shields.io/maven-central/v/network.ike.platform/ike-platform[Maven Central,link=https://central.sonatype.com/artifact/network.ike.platform/ike-platform]
 
 Consumer-facing parent POM, BOM, and workspace management plugin
         for the IKE Network. External doc and code projects inherit
@@ -21,7 +19,7 @@ Consumer-facing parent POM, BOM, and workspace management plugin
 
 [cols="1,2",options="autowidth"]
 |===
-| Version | 72
+| Version | 73
 | Site | https://ike.network/ike-platform/[ike.network/ike-platform]
 | GitHub | https://github.com/IKE-Network/ike-platform[IKE-Network/ike-platform]
 |===
