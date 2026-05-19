@@ -5,9 +5,11 @@
 // project-version: 188
 // project-url: https://ike.network/ike-tooling/
 // github-url: https://github.com/IKE-Network/ike-tooling
-// registered: 2026-05-19T05:55:16.733896Z
+// registered: 2026-05-19T15:31:06.734827Z
 
 = IKE Tooling
+
+image:https://img.shields.io/maven-central/v/network.ike.tooling/ike-tooling[Maven Central,link=https://central.sonatype.com/artifact/network.ike.tooling/ike-tooling]
 
 Workspace management, release orchestration, gitflow workflows,
         and build-time utilities for IKE Network projects.
