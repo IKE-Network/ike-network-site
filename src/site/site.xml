@@ -33,9 +33,9 @@
         <convertImagesToThumbnails>false</convertImagesToThumbnails>
         <setExplicitImageSize>false</setExplicitImageSize>
         <keywords>IKE, integrated knowledge exchange, sociotechnical fabric,
-                   knowledge infrastructure, IKE Network,
-                   ike-tooling, ike-platform, ike-docs, ike-example-ws,
-                   example-project, doc-example</keywords>
+                   knowledge infrastructure, IKE Network, Maven Central,
+                   ike-base-parent, ike-tooling, ike-docs, ike-platform,
+                   ike-example-ws, example-project, doc-example</keywords>
     </custom>
 
     <bannerLeft name="IKE Network" href="index.html">
@@ -61,40 +61,45 @@
             <item name="Home" href="index.html"/>
         </menu>
 
-        <menu name="Tooling">
+        <menu name="Foundation">
+            <item name="IKE Base Parent"
+                  href="https://ike.network/ike-base-parent/"/>
             <item name="IKE Tooling"
                   href="https://ike.network/ike-tooling/"/>
             <item name="IKE Docs"
                   href="https://ike.network/ike-docs/"/>
-        </menu>
-
-        <menu name="Platform">
             <item name="IKE Platform"
                   href="https://ike.network/ike-platform/"/>
         </menu>
 
-        <menu name="Reference Projects">
-            <item name="example-project"
-                  href="https://ike.network/example-project/"/>
+        <menu name="Examples">
             <item name="doc-example"
                   href="https://ike.network/doc-example/"/>
+            <item name="example-project"
+                  href="https://ike.network/example-project/"/>
             <item name="ike-example-ws"
                   href="https://ike.network/ike-example-ws/"/>
+            <item name="ike-example-its"
+                  href="https://ike.network/ike-example-its/"/>
         </menu>
 
         <menu name="Source">
+            <item name="ike-base-parent"
+                  href="https://github.com/IKE-Network/ike-base-parent"/>
             <item name="ike-tooling"
                   href="https://github.com/IKE-Network/ike-tooling"/>
             <item name="ike-docs"
                   href="https://github.com/IKE-Network/ike-docs"/>
             <item name="ike-platform"
                   href="https://github.com/IKE-Network/ike-platform"/>
-            <item name="example-project"
-                  href="https://github.com/IKE-Network/example-project"/>
             <item name="doc-example"
                   href="https://github.com/IKE-Network/doc-example"/>
+            <item name="example-project"
+                  href="https://github.com/IKE-Network/example-project"/>
             <item name="ike-example-ws"
                   href="https://github.com/IKE-Network/ike-example-ws"/>
+            <item name="ike-example-its"
+                  href="https://github.com/IKE-Network/ike-example-its"/>
         </menu>
     </body>
 </site>
