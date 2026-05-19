@@ -1,0 +1,24 @@
+// IKE Project Registration Fragment
+// Managed by ike:site-publish — do not edit manually.
+//
+// project-id: ike-base-parent
+// project-version: 1
+// project-url: https://ike.network/ike-base-parent/
+// github-url: https://github.com/IKE-Network/ike-base-parent
+// registered: 2026-05-19T15:28:52.556106Z
+
+= IKE Base Parent
+
+image:https://img.shields.io/maven-central/v/network.ike/ike-base-parent[Maven Central,link=https://central.sonatype.com/artifact/network.ike/ike-base-parent]
+
+Tier 0 foundation parent for the IKE Network — the apex of the
+        parent inheritance forest, inherited by ike-tooling, ike-docs,
+        and ike-platform. Carries shared publishing metadata, GPG
+        signing, and Maven Central publishing configuration.
+
+[cols="1,2",options="autowidth"]
+|===
+| Version | 1
+| Site | https://ike.network/ike-base-parent/[ike.network/ike-base-parent]
+| GitHub | https://github.com/IKE-Network/ike-base-parent[IKE-Network/ike-base-parent]
+|===
