@@ -5,9 +5,11 @@
 // project-version: 44
 // project-url: https://ike.network/ike-docs/
 // github-url: https://github.com/IKE-Network/ike-docs
-// registered: 2026-05-19T14:00:37.160862Z
+// registered: 2026-05-19T15:32:37.344108Z
 
 = IKE Docs
+
+image:https://img.shields.io/maven-central/v/network.ike.docs/ike-docs[Maven Central,link=https://central.sonatype.com/artifact/network.ike.docs/ike-docs]
 
 Documentation plumbing for the IKE Network. Hosts the
         ike-doc-maven-plugin (ike-doc packaging, AsciiDoc/render
