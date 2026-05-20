@@ -9,6 +9,8 @@
 
 = IKE Workspace Extension
 
+image:https://img.shields.io/maven-central/v/network.ike.tooling/ike-workspace-extension[Maven Central,link=https://central.sonatype.com/artifact/network.ike.tooling/ike-workspace-extension]
+
 Maven 4 build extension that prunes non-existent &lt;subprojects&gt;
         entries from workspace POMs before model validation. Lets a
         fresh clone of an IKE workspace bootstrap with mvn ws:scaffold-init

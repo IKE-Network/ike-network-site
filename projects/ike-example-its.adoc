@@ -12,7 +12,7 @@
 End-to-end smoke tests that exercise the IKE Network release
         cascade as external consumers would. Each IT case clones the
         intended usage pattern (doc-only project, java + docs, BOM
-        import, ws:create scaffold) in a fresh Maven environment and
+        import, ws:scaffold-init scaffold) in a fresh Maven environment and
         asserts that the build succeeds and produces the expected
         artifacts.
 
