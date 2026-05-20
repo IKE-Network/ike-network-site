@@ -29,12 +29,6 @@ that exists only to illustrate a pattern.
 
 include::../../../projects/doc-example.adoc[leveloffset=+1]
 
-include::../../../projects/example-project.adoc[leveloffset=+1]
-
-include::../../../projects/ike-example-its.adoc[leveloffset=+1]
-
-include::../../../projects/ike-example-ws.adoc[leveloffset=+1]
-
 include::../../../projects/ike-workspace-extension.adoc[leveloffset=+1]
 
 include::../../../projects/integration-tests-example.adoc[leveloffset=+1]
