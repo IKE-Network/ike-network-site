@@ -7,37 +7,8 @@ fabric where knowledge compounds.
 == Foundation
 
 The IKE foundation — published to Maven Central and
-inheritable by any project.
-
-The foundation members fall into two layered orderings.
-`ike-base-parent` sits at the apex of the *parent*
-inheritance chain — every other foundation artifact
-inherits from it. `ike-platform` sits at the terminus
-of the *build-and-release* dependency chain — releases
-propagate through it last.
-
-.Build/release dependency order
-[source]
-----
-                  ike-base-parent
-                  (parent inheritance only)
-                         |
-        +----------------+----------------+
-        v                                 v
-   ike-tooling                  ike-workspace-extension
-        |                                 |
-        v                                 |
-    ike-docs                              |
-        |                                 |
-        +----------------+----------------+
-                         v
-                    ike-platform
-              (consumes all three above)
-----
-
-Members at the same level have no dependency on each
-other — `ike-tooling` and `ike-workspace-extension`
-can release in either order or in parallel.
+inheritable by any project. Each layer builds on the
+one above it.
 
 include::../../../projects/ike-base-parent.adoc[leveloffset=+1]
 
