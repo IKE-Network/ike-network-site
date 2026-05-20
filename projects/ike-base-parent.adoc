@@ -5,7 +5,7 @@
 // project-version: 2
 // project-url: https://ike.network/ike-base-parent/
 // github-url: https://github.com/IKE-Network/ike-base-parent
-// registered: 2026-05-20T03:41:48.856597Z
+// registered: 2026-05-20T03:44:32.444326Z
 
 = IKE Base Parent
 
