@@ -1,0 +1,24 @@
+// IKE Project Registration Fragment
+// Managed by ike:site-publish — do not edit manually.
+//
+// project-id: integration-tests-example
+// project-version: 24
+// project-url: https://ike.network/integration-tests-example/
+// github-url: https://github.com/IKE-Network/integration-tests-example
+// registered: 2026-05-20T19:06:00.440084Z
+
+= IKE Integration Tests Example
+
+End-to-end smoke tests that exercise the IKE Network release
+        cascade as external consumers would. Each IT case clones the
+        intended usage pattern (doc-only project, java + docs, BOM
+        import, ws:create scaffold) in a fresh Maven environment and
+        asserts that the build succeeds and produces the expected
+        artifacts.
+
+[cols="1,2",options="autowidth"]
+|===
+| Version | 24
+| Site | https://ike.network/integration-tests-example/[ike.network/integration-tests-example]
+| GitHub | https://github.com/IKE-Network/integration-tests-example[IKE-Network/integration-tests-example]
+|===
