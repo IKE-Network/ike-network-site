@@ -2,10 +2,10 @@
 // Managed by ike:site-publish — do not edit manually.
 //
 // project-id: doc-example
-// project-version: 30
+// project-version: 31
 // project-url: https://ike.network/doc-example/
 // github-url: https://github.com/IKE-Network/doc-example
-// registered: 2026-05-17T22:19:16.871765Z
+// registered: 2026-05-20T05:30:01.472983Z
 
 = IKE Documentation Example
 
@@ -15,7 +15,7 @@ Documentation-only project demonstrating the IKE AsciiDoc pipeline.
 
 [cols="1,2",options="autowidth"]
 |===
-| Version | 30
+| Version | 31
 | Site | https://ike.network/doc-example/[ike.network/doc-example]
 | GitHub | https://github.com/IKE-Network/doc-example[IKE-Network/doc-example]
 |===
