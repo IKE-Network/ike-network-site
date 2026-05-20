@@ -16,8 +16,6 @@ include::../../../projects/ike-tooling.adoc[leveloffset=+1]
 
 include::../../../projects/ike-docs.adoc[leveloffset=+1]
 
-include::../../../projects/ike-workspace-extension.adoc[leveloffset=+1]
-
 include::../../../projects/ike-platform.adoc[leveloffset=+1]
 
 == Examples
@@ -36,4 +34,8 @@ include::../../../projects/example-project.adoc[leveloffset=+1]
 include::../../../projects/ike-example-its.adoc[leveloffset=+1]
 
 include::../../../projects/ike-example-ws.adoc[leveloffset=+1]
+
+include::../../../projects/ike-network-site.adoc[leveloffset=+1]
+
+include::../../../projects/ike-workspace-extension.adoc[leveloffset=+1]
 
