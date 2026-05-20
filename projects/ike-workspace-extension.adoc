@@ -2,14 +2,12 @@
 // Managed by ike:site-publish — do not edit manually.
 //
 // project-id: ike-workspace-extension
-// project-version: 2
+// project-version: 3
 // project-url: https://ike.network/ike-workspace-extension/
 // github-url: https://github.com/IKE-Network/ike-workspace-extension
-// registered: 2026-05-20T03:57:45.289700Z
+// registered: 2026-05-20T05:49:41.833563Z
 
 = IKE Workspace Extension
-
-image:https://img.shields.io/maven-central/v/network.ike.tooling/ike-workspace-extension[Maven Central,link=https://central.sonatype.com/artifact/network.ike.tooling/ike-workspace-extension]
 
 Maven 4 build extension that prunes non-existent &lt;subprojects&gt;
         entries from workspace POMs before model validation. Lets a
@@ -18,7 +16,7 @@ Maven 4 build extension that prunes non-existent &lt;subprojects&gt;
 
 [cols="1,2",options="autowidth"]
 |===
-| Version | 2
+| Version | 3
 | Site | https://ike.network/ike-workspace-extension/[ike.network/ike-workspace-extension]
 | GitHub | https://github.com/IKE-Network/ike-workspace-extension[IKE-Network/ike-workspace-extension]
 |===
