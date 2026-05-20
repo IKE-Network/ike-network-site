@@ -1,0 +1,20 @@
+// IKE Project Registration Fragment
+// Managed by ike:site-publish — do not edit manually.
+//
+// project-id: project-example
+// project-version: 32
+// project-url: https://ike.network/project-example/
+// github-url: https://github.com/IKE-Network/project-example
+// registered: 2026-05-20T19:05:26.735955Z
+
+= IKE Project Example
+
+Example Java project demonstrating IKE documentation pipeline
+        integration with Java source, tests, and Koncept macros.
+
+[cols="1,2",options="autowidth"]
+|===
+| Version | 32
+| Site | https://ike.network/project-example/[ike.network/project-example]
+| GitHub | https://github.com/IKE-Network/project-example[IKE-Network/project-example]
+|===
