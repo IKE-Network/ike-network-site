@@ -16,6 +16,8 @@ include::../../../projects/ike-tooling.adoc[leveloffset=+1]
 
 include::../../../projects/ike-docs.adoc[leveloffset=+1]
 
+include::../../../projects/ike-workspace-extension.adoc[leveloffset=+1]
+
 include::../../../projects/ike-platform.adoc[leveloffset=+1]
 
 == Examples
@@ -28,8 +30,6 @@ artifacts would invite accidental coupling to code
 that exists only to illustrate a pattern.
 
 include::../../../projects/doc-example.adoc[leveloffset=+1]
-
-include::../../../projects/ike-workspace-extension.adoc[leveloffset=+1]
 
 include::../../../projects/integration-tests-example.adoc[leveloffset=+1]
 
