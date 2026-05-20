@@ -1,0 +1,23 @@
+// IKE Project Registration Fragment
+// Managed by ike:site-publish — do not edit manually.
+//
+// project-id: workspace-example
+// project-version: 23
+// project-url: https://ike.network/workspace-example/
+// github-url: https://github.com/IKE-Network/workspace-example
+// registered: 2026-05-20T19:06:44.817049Z
+
+= IKE Workspace Example
+
+[cols="1,2",options="autowidth"]
+|===
+| Version | 23
+| Site | https://ike.network/workspace-example/[ike.network/workspace-example]
+| GitHub | https://github.com/IKE-Network/workspace-example[IKE-Network/workspace-example]
+|===
+
+=== Modules
+
+* doc-example
+* project-example
+* integration-tests-example
