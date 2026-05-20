@@ -43,6 +43,17 @@
         </license>
     </licenses>
 
+    <distributionManagement>
+        <!-- <site> URL for site:stage relative-path computation.
+             The actual content publish goes through ike:site-publish
+             which rsyncs/pushes to the IKE-Network.github.io gh-pages
+             repo, not via site:deploy. -->
+        <site>
+            <id>ike-site</id>
+            <url>https://ike.network/</url>
+        </site>
+    </distributionManagement>
+
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
