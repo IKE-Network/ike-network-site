@@ -2,10 +2,10 @@
 // Managed by ike:site-publish — do not edit manually.
 //
 // project-id: ike-base-parent
-// project-version: 6
+// project-version: 7
 // project-url: https://ike.network/ike-base-parent/
 // github-url: https://github.com/IKE-Network/ike-base-parent
-// registered: 2026-05-21T04:05:14.698202Z
+// registered: 2026-05-21T17:04:01.520526Z
 
 = IKE Base Parent
 
@@ -18,7 +18,7 @@ Tier 0 foundation parent for the IKE Network — the apex of the
 
 [cols="1,2",options="autowidth"]
 |===
-| Version | 6
+| Version | 7
 | Site | https://ike.network/ike-base-parent/[ike.network/ike-base-parent]
 | GitHub | https://github.com/IKE-Network/ike-base-parent[IKE-Network/ike-base-parent]
 |===
