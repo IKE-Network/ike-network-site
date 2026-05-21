@@ -1,0 +1,24 @@
+// IKE Project Registration Fragment
+// Managed by ike:site-publish — do not edit manually.
+//
+// project-id: ike-version-management-extension
+// project-version: 1
+// project-url: https://ike.network/ike-version-management-extension/
+// github-url: https://github.com/IKE-Network/ike-version-management-extension
+// registered: 2026-05-21T16:40:28.328818Z
+
+= IKE Version Management Extension
+
+Maven 4 build extension that implements the IKE GA·convention
+        for version-property naming: ${groupId·artifactId} (U+00B7
+        MIDDLE DOT). Injects alias indirections from a bundled
+        manifest, fails fast on undeclared ${G·A} references, and
+        detects ${G.A} typos with a corrective hint. See
+        IKE-Network/ike-issues#470, #472.
+
+[cols="1,2",options="autowidth"]
+|===
+| Version | 1
+| Site | https://ike.network/ike-version-management-extension/[ike.network/ike-version-management-extension]
+| GitHub | https://github.com/IKE-Network/ike-version-management-extension[IKE-Network/ike-version-management-extension]
+|===
