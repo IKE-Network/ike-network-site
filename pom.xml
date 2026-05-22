@@ -43,6 +43,18 @@
         </license>
     </licenses>
 
+    <!-- Locally declared so the cascade's coordinate-to-repository
+         lookup and the generated site's GitHub link both resolve to
+         the real repo. ike-network-site has no <parent>, so there is
+         no inherited <scm> to override — this block is the only one
+         in the model. See IKE-Network/ike-issues#496. -->
+    <scm>
+        <connection>scm:git:https://github.com/IKE-Network/ike-network-site.git</connection>
+        <developerConnection>scm:git:git@github.com:IKE-Network/ike-network-site.git</developerConnection>
+        <url>https://github.com/IKE-Network/ike-network-site</url>
+        <tag>HEAD</tag>
+    </scm>
+
     <distributionManagement>
         <!-- <site> URL for site:stage relative-path computation.
              The actual content publish goes through ike:site-publish
