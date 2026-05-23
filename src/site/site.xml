@@ -36,7 +36,7 @@
                    knowledge infrastructure, IKE Network, Maven Central,
                    ike-base-parent, ike-tooling, ike-docs, ike-platform,
                    ike-workspace-extension, doc-example, project-example,
-                   integration-tests-example, workspace-example</keywords>
+                   integration-tests-example, workspace-reactor-example</keywords>
     </custom>
 
     <bannerLeft name="IKE Network" href="index.html">
@@ -82,8 +82,8 @@
                   href="https://ike.network/project-example/"/>
             <item name="integration-tests-example"
                   href="https://ike.network/integration-tests-example/"/>
-            <item name="workspace-example"
-                  href="https://ike.network/workspace-example/"/>
+            <item name="workspace-reactor-example"
+                  href="https://ike.network/workspace-reactor-example/"/>
         </menu>
 
         <menu name="Source">
@@ -103,8 +103,8 @@
                   href="https://github.com/IKE-Network/project-example"/>
             <item name="integration-tests-example"
                   href="https://github.com/IKE-Network/integration-tests-example"/>
-            <item name="workspace-example"
-                  href="https://github.com/IKE-Network/workspace-example"/>
+            <item name="workspace-reactor-example"
+                  href="https://github.com/IKE-Network/workspace-reactor-example"/>
         </menu>
     </body>
 </site>

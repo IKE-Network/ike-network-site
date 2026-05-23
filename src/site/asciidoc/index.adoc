@@ -66,5 +66,5 @@ include::../../../projects/integration-tests-example.adoc[leveloffset=+1]
 
 include::../../../projects/project-example.adoc[leveloffset=+1]
 
-include::../../../projects/workspace-example.adoc[leveloffset=+1]
+include::../../../projects/workspace-reactor-example.adoc[leveloffset=+1]
 
