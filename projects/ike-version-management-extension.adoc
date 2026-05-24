@@ -5,9 +5,11 @@
 // project-version: 1
 // project-url: https://ike.network/ike-version-management-extension/
 // github-url: https://github.com/IKE-Network/ike-version-management-extension
-// registered: 2026-05-21T16:40:28.328818Z
+// registered: 2026-05-24T19:24:32.668714Z
 
 = IKE Version Management Extension
+
+image:https://img.shields.io/maven-central/v/network.ike.tooling/ike-version-management-extension[Maven Central,link=https://central.sonatype.com/artifact/network.ike.tooling/ike-version-management-extension]
 
 Maven 4 build extension that implements the IKE GA·convention
         for version-property naming: ${groupId·artifactId} (U+00B7
