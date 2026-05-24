@@ -60,6 +60,8 @@ that exists only to illustrate a pattern.
 
 include::../../../projects/doc-example.adoc[leveloffset=+1]
 
+include::../../../projects/ike-java-support.adoc[leveloffset=+1]
+
 include::../../../projects/ike-version-management-extension.adoc[leveloffset=+1]
 
 include::../../../projects/integration-tests-example.adoc[leveloffset=+1]

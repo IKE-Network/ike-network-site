@@ -1,0 +1,23 @@
+// IKE Project Registration Fragment
+// Managed by ike:site-publish — do not edit manually.
+//
+// project-id: ike-java-support
+// project-version: 1
+// project-url: https://ike.network/ike-java-support/
+// github-url: https://github.com/IKE-Network/ike-java-support
+// registered: 2026-05-24T00:02:24.308523Z
+
+= IKE Java Support
+
+Shared, enforced-zero-dependency value types for the IKE
+        Network: ConstantBackedEnum for compiler-visible constants,
+        EnumDefinition for controlled-vocabulary enums, and the
+        ReleasePolicy release-cascade policy ladder. See
+        IKE-Network/ike-issues#498.
+
+[cols="1,2",options="autowidth"]
+|===
+| Version | 1
+| Site | https://ike.network/ike-java-support/[ike.network/ike-java-support]
+| GitHub | https://github.com/IKE-Network/ike-java-support[IKE-Network/ike-java-support]
+|===
