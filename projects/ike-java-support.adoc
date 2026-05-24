@@ -5,9 +5,11 @@
 // project-version: 1
 // project-url: https://ike.network/ike-java-support/
 // github-url: https://github.com/IKE-Network/ike-java-support
-// registered: 2026-05-24T00:02:24.308523Z
+// registered: 2026-05-24T19:24:12.840525Z
 
 = IKE Java Support
+
+image:https://img.shields.io/maven-central/v/network.ike/ike-java-support[Maven Central,link=https://central.sonatype.com/artifact/network.ike/ike-java-support]
 
 Shared, enforced-zero-dependency value types for the IKE
         Network: ConstantBackedEnum for compiler-visible constants,
