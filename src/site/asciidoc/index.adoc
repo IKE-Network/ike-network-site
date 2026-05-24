@@ -22,9 +22,6 @@ propagate through it last.
                   ike-base-parent
                   (parent inheritance only)
                          |
-                ike-java-support
-                  (Tier-0 value types)
-                         |
         +----------------+----------------+
         v                                 v
    ike-tooling                  ike-workspace-extension
@@ -36,10 +33,6 @@ propagate through it last.
                          v
                     ike-platform
               (consumes all three above)
-
-  ike-version-management-extension
-  (registered at every consumer build;
-   validates ${G·A} pins and ${G·A·policy})
 ----
 
 Members at the same level have no dependency on each
@@ -48,15 +41,11 @@ can release in either order or in parallel.
 
 include::../../../projects/ike-base-parent.adoc[leveloffset=+1]
 
-include::../../../projects/ike-java-support.adoc[leveloffset=+1]
-
 include::../../../projects/ike-tooling.adoc[leveloffset=+1]
 
 include::../../../projects/ike-docs.adoc[leveloffset=+1]
 
 include::../../../projects/ike-workspace-extension.adoc[leveloffset=+1]
-
-include::../../../projects/ike-version-management-extension.adoc[leveloffset=+1]
 
 include::../../../projects/ike-platform.adoc[leveloffset=+1]
 
@@ -70,6 +59,10 @@ artifacts would invite accidental coupling to code
 that exists only to illustrate a pattern.
 
 include::../../../projects/doc-example.adoc[leveloffset=+1]
+
+include::../../../projects/ike-java-support.adoc[leveloffset=+1]
+
+include::../../../projects/ike-version-management-extension.adoc[leveloffset=+1]
 
 include::../../../projects/integration-tests-example.adoc[leveloffset=+1]
 
