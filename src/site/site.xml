@@ -34,8 +34,9 @@
         <setExplicitImageSize>false</setExplicitImageSize>
         <keywords>IKE, integrated knowledge exchange, sociotechnical fabric,
                    knowledge infrastructure, IKE Network, Maven Central,
-                   ike-base-parent, ike-tooling, ike-docs, ike-platform,
-                   ike-workspace-extension, doc-example, project-example,
+                   ike-base-parent, ike-java-support, ike-tooling, ike-docs,
+                   ike-workspace-extension, ike-version-management-extension,
+                   ike-platform, doc-example, project-example,
                    integration-tests-example, workspace-reactor-example</keywords>
     </custom>
 
@@ -62,15 +63,23 @@
             <item name="Home" href="index.html"/>
         </menu>
 
+        <!-- Foundation members, in dependency-direction order
+             (upstream → downstream). Matches OrgSiteSupport.FOUNDATION
+             in ike-tooling; drift is tracked by
+             IKE-Network/ike-issues#520. -->
         <menu name="Foundation">
             <item name="IKE Base Parent"
                   href="https://ike.network/ike-base-parent/"/>
+            <item name="IKE Java Support"
+                  href="https://ike.network/ike-java-support/"/>
             <item name="IKE Tooling"
                   href="https://ike.network/ike-tooling/"/>
             <item name="IKE Docs"
                   href="https://ike.network/ike-docs/"/>
             <item name="IKE Workspace Extension"
                   href="https://ike.network/ike-workspace-extension/"/>
+            <item name="IKE Version Management Extension"
+                  href="https://ike.network/ike-version-management-extension/"/>
             <item name="IKE Platform"
                   href="https://ike.network/ike-platform/"/>
         </menu>
@@ -89,12 +98,16 @@
         <menu name="Source">
             <item name="ike-base-parent"
                   href="https://github.com/IKE-Network/ike-base-parent"/>
+            <item name="ike-java-support"
+                  href="https://github.com/IKE-Network/ike-java-support"/>
             <item name="ike-tooling"
                   href="https://github.com/IKE-Network/ike-tooling"/>
             <item name="ike-docs"
                   href="https://github.com/IKE-Network/ike-docs"/>
             <item name="ike-workspace-extension"
                   href="https://github.com/IKE-Network/ike-workspace-extension"/>
+            <item name="ike-version-management-extension"
+                  href="https://github.com/IKE-Network/ike-version-management-extension"/>
             <item name="ike-platform"
                   href="https://github.com/IKE-Network/ike-platform"/>
             <item name="doc-example"
