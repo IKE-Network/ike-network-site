@@ -87,10 +87,10 @@
         <menu name="Examples">
             <item name="doc-example"
                   href="https://ike.network/doc-example/"/>
-            <item name="project-example"
-                  href="https://ike.network/project-example/"/>
             <item name="integration-tests-example"
                   href="https://ike.network/integration-tests-example/"/>
+            <item name="project-example"
+                  href="https://ike.network/project-example/"/>
             <item name="workspace-reactor-example"
                   href="https://ike.network/workspace-reactor-example/"/>
         </menu>
@@ -112,10 +112,10 @@
                   href="https://github.com/IKE-Network/ike-platform"/>
             <item name="doc-example"
                   href="https://github.com/IKE-Network/doc-example"/>
-            <item name="project-example"
-                  href="https://github.com/IKE-Network/project-example"/>
             <item name="integration-tests-example"
                   href="https://github.com/IKE-Network/integration-tests-example"/>
+            <item name="project-example"
+                  href="https://github.com/IKE-Network/project-example"/>
             <item name="workspace-reactor-example"
                   href="https://github.com/IKE-Network/workspace-reactor-example"/>
         </menu>
