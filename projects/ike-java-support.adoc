@@ -2,10 +2,10 @@
 // Managed by ike:site-publish — do not edit manually.
 //
 // project-id: ike-java-support
-// project-version: 5
+// project-version: 6
 // project-url: https://ike.network/ike-java-support/
 // github-url: https://github.com/IKE-Network/ike-java-support
-// registered: 2026-05-26T03:35:37.868410Z
+// registered: 2026-05-26T16:28:02.435421Z
 
 = IKE Java Support
 
@@ -19,7 +19,7 @@ Shared, enforced-zero-dependency value types for the IKE
 
 [cols="1,2",options="autowidth"]
 |===
-| Version | 5
+| Version | 6
 | Site | https://ike.network/ike-java-support/[ike.network/ike-java-support]
 | GitHub | https://github.com/IKE-Network/ike-java-support[IKE-Network/ike-java-support]
 |===
