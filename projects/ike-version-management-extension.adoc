@@ -2,10 +2,10 @@
 // Managed by ike:site-publish — do not edit manually.
 //
 // project-id: ike-version-management-extension
-// project-version: 4
+// project-version: 5
 // project-url: https://ike.network/ike-version-management-extension/
 // github-url: https://github.com/IKE-Network/ike-version-management-extension
-// registered: 2026-05-25T19:17:14.778716Z
+// registered: 2026-05-26T03:43:45.657287Z
 
 = IKE Version Management Extension
 
@@ -20,7 +20,7 @@ Maven 4 build extension that implements the IKE GA·convention
 
 [cols="1,2",options="autowidth"]
 |===
-| Version | 4
+| Version | 5
 | Site | https://ike.network/ike-version-management-extension/[ike.network/ike-version-management-extension]
 | GitHub | https://github.com/IKE-Network/ike-version-management-extension[IKE-Network/ike-version-management-extension]
 |===
