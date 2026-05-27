@@ -2,10 +2,10 @@
 // Managed by ike:site-publish — do not edit manually.
 //
 // project-id: integration-tests-example
-// project-version: 24
+// project-version: 25
 // project-url: https://ike.network/integration-tests-example/
 // github-url: https://github.com/IKE-Network/integration-tests-example
-// registered: 2026-05-21T03:21:14.715954Z
+// registered: 2026-05-27T03:23:33.686149Z
 
 = IKE Integration Tests Example
 
@@ -18,7 +18,7 @@ End-to-end smoke tests that exercise the IKE Network release
 
 [cols="1,2",options="autowidth"]
 |===
-| Version | 24
+| Version | 25
 | Site | https://ike.network/integration-tests-example/[ike.network/integration-tests-example]
 | GitHub | https://github.com/IKE-Network/integration-tests-example[IKE-Network/integration-tests-example]
 |===
