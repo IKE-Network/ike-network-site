@@ -5,7 +5,7 @@
 // project-version: 1
 // project-url: https://ike.network/hl7-ig-corpus-example/
 // github-url: https://github.com/IKE-Network/hl7-ig-corpus-example
-// registered: 2026-05-28T18:58:25.478697Z
+// registered: 2026-05-28T20:00:00.543121Z
 
 = HL7 IG Corpus Example
 
