@@ -54,3 +54,5 @@ include::../../../projects/project-example.adoc[leveloffset=+1]
 
 include::../../../projects/workspace-reactor-example.adoc[leveloffset=+1]
 
+include::../../../projects/hl7-ig-corpus-example.adoc[leveloffset=+1]
+

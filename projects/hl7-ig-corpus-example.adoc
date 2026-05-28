@@ -1,0 +1,21 @@
+// IKE Project Registration Fragment
+// Placeholder — will be overwritten by ike:site-publish on first
+// publish from the hl7-ig-corpus-example repository.
+//
+// project-id: hl7-ig-corpus-example
+// project-url: https://ike.network/hl7-ig-corpus-example/
+// github-url: https://github.com/IKE-Network/hl7-ig-corpus-example
+
+= HL7 IG Corpus Example
+
+First worked example of the corpus-example pattern — a multi-module
+documentation project that ingests a corpus of HL7 implementation
+guides into the IKE topic library and produces both per-IG
+reconstruction assemblies and cross-IG analytic outputs.
+
+[cols="1,2",options="autowidth"]
+|===
+| Status | Scaffold — awaiting first ingestion run (US Core)
+| GitHub | https://github.com/IKE-Network/hl7-ig-corpus-example[IKE-Network/hl7-ig-corpus-example]
+| Design | https://github.com/IKE-Network/ike-issues/issues/538[ike-issues#538]
+|===
