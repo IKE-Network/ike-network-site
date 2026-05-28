@@ -5,7 +5,7 @@
 // project-version: 33
 // project-url: https://ike.network/doc-example/
 // github-url: https://github.com/IKE-Network/doc-example
-// registered: 2026-05-27T03:20:06.746071Z
+// registered: 2026-05-28T20:09:26.475862Z
 
 = IKE Documentation Example
 
