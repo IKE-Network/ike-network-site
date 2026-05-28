@@ -48,11 +48,11 @@ that exists only to illustrate a pattern.
 
 include::../../../projects/doc-example.adoc[leveloffset=+1]
 
+include::../../../projects/hl7-ig-corpus-example.adoc[leveloffset=+1]
+
 include::../../../projects/integration-tests-example.adoc[leveloffset=+1]
 
 include::../../../projects/project-example.adoc[leveloffset=+1]
 
 include::../../../projects/workspace-reactor-example.adoc[leveloffset=+1]
-
-include::../../../projects/hl7-ig-corpus-example.adoc[leveloffset=+1]
 
