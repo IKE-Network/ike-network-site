@@ -5,7 +5,7 @@
 // project-version: 24
 // project-url: https://ike.network/workspace-reactor-example/
 // github-url: https://github.com/IKE-Network/workspace-reactor-example
-// registered: 2026-05-27T03:29:21.169604Z
+// registered: 2026-05-28T20:01:00.289641Z
 
 = IKE Workspace Reactor Example
 
