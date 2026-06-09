@@ -91,6 +91,8 @@
                   href="https://ike.network/doc-example/"/>
             <item name="hl7-ig-corpus-example"
                   href="https://ike.network/hl7-ig-corpus-example/"/>
+            <item name="ike-network-site"
+                  href="https://ike.network/ike-network-site/"/>
             <item name="integration-tests-example"
                   href="https://ike.network/integration-tests-example/"/>
             <item name="project-example"
@@ -118,6 +120,8 @@
                   href="https://github.com/IKE-Network/doc-example"/>
             <item name="hl7-ig-corpus-example"
                   href="https://github.com/IKE-Network/hl7-ig-corpus-example"/>
+            <item name="ike-network-site"
+                  href="https://github.com/IKE-Network/ike-network-site"/>
             <item name="integration-tests-example"
                   href="https://github.com/IKE-Network/integration-tests-example"/>
             <item name="project-example"
