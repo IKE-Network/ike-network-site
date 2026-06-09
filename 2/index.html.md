@@ -149,14 +149,23 @@ Worked example of the corpus-example pattern — multi-module documentation proj
 - us-core
 - cross-ig-overlap
 
+## [#ike-network_2](#ike-network_2)IKE Network
+
+Organization landing page for IKE Network projects.
+
+| Version | 2 |
+| --- | --- |
+| Site | [ike.network/ike-network-site](https://ike.network/ike-network-site/)[26] |
+| GitHub | [IKE-Network/ike-network-site](https://github.com/IKE-Network/ike-network-site)[27] |
+
 ## [#ike-integration-tests-example](#ike-integration-tests-example)IKE Integration Tests Example
 
 End-to-end smoke tests that exercise the IKE Network release cascade as external consumers would. Each IT case clones the intended usage pattern (doc-only project, java + docs, BOM import, ws:create scaffold) in a fresh Maven environment and asserts that the build succeeds and produces the expected artifacts.
 
 | Version | 25 |
 | --- | --- |
-| Site | [ike.network/integration-tests-example](https://ike.network/integration-tests-example/)[26] |
-| GitHub | [IKE-Network/integration-tests-example](https://github.com/IKE-Network/integration-tests-example)[27] |
+| Site | [ike.network/integration-tests-example](https://ike.network/integration-tests-example/)[28] |
+| GitHub | [IKE-Network/integration-tests-example](https://github.com/IKE-Network/integration-tests-example)[29] |
 
 ## [#ike-project-example](#ike-project-example)IKE Project Example
 
@@ -164,15 +173,15 @@ Example Java project demonstrating IKE documentation pipeline integration with J
 
 | Version | 33 |
 | --- | --- |
-| Site | [ike.network/project-example](https://ike.network/project-example/)[28] |
-| GitHub | [IKE-Network/project-example](https://github.com/IKE-Network/project-example)[29] |
+| Site | [ike.network/project-example](https://ike.network/project-example/)[30] |
+| GitHub | [IKE-Network/project-example](https://github.com/IKE-Network/project-example)[31] |
 
 ## [#ike-workspace-reactor-example](#ike-workspace-reactor-example)IKE Workspace Reactor Example
 
 | Version | 24 |
 | --- | --- |
-| Site | [ike.network/workspace-reactor-example](https://ike.network/workspace-reactor-example/)[30] |
-| GitHub | [IKE-Network/workspace-reactor-example](https://github.com/IKE-Network/workspace-reactor-example)[31] |
+| Site | [ike.network/workspace-reactor-example](https://ike.network/workspace-reactor-example/)[32] |
+| GitHub | [IKE-Network/workspace-reactor-example](https://github.com/IKE-Network/workspace-reactor-example)[33] |
 
 #### [#modules_5](#modules_5)Modules
 

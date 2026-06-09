@@ -4,7 +4,7 @@
 
 ## IKE Network
 
-- [Powered by IKE — Brand Badge](https://ike.network/brand.html.md)
+- [Powered by IKE](https://ike.network/brand.html.md)
 - [IKE Network](https://ike.network/index.html.md)
 
 ## Other
