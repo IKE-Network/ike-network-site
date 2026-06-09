@@ -51,6 +51,11 @@ The templates new projects start from, each built on the IKE foundation:
   rendered HTML and PDF.
 | https://github.com/IKE-Network/doc-example[doc-example]
 | Docs-only template using `ike-doc` packaging; multi-renderer PDF and HTML.
+| https://github.com/IKE-Network/hl7-ig-corpus-example[hl7-ig-corpus-example]
+| Worked example of the IKE corpus pattern — ingests a corpus of HL7
+  implementation guides into the topic library.
+| https://github.com/IKE-Network/integration-tests-example[integration-tests-example]
+| Release-cascade integration-test harness for the IKE foundation.
 | https://github.com/IKE-Network/workspace-reactor-example[workspace-reactor-example]
 | Multi-repo workspace aggregator driven by the `ws:*` orchestration goals.
 |===
