@@ -57,10 +57,12 @@
         <links>
             <item name="GitHub" href="https://github.com/IKE-Network"/>
             <item name="Issues" href="https://github.com/IKE-Network/ike-issues"/>
+            <item name="Brand" href="brand.html"/>
         </links>
 
         <menu name="IKE Network">
             <item name="Home" href="index.html"/>
+            <item name="Powered by IKE" href="brand.html"/>
         </menu>
 
         <!-- Foundation members, in dependency-direction order
