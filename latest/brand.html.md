@@ -34,7 +34,9 @@ The templates new projects start from, each built on the IKE foundation:
 | --- | --- |
 | [project-example](https://github.com/IKE-Network/project-example)[3] | Java + docs reference template. Inherits `ike-parent`; produces a jar plus rendered HTML and PDF. |
 | [doc-example](https://github.com/IKE-Network/doc-example)[4] | Docs-only template using `ike-doc` packaging; multi-renderer PDF and HTML. |
-| [workspace-reactor-example](https://github.com/IKE-Network/workspace-reactor-example)[5] | Multi-repo workspace aggregator driven by the `ws:*` orchestration goals. |
+| [hl7-ig-corpus-example](https://github.com/IKE-Network/hl7-ig-corpus-example)[5] | Worked example of the IKE corpus pattern — ingests a corpus of HL7 implementation guides into the topic library. |
+| [integration-tests-example](https://github.com/IKE-Network/integration-tests-example)[6] | Release-cascade integration-test harness for the IKE foundation. |
+| [workspace-reactor-example](https://github.com/IKE-Network/workspace-reactor-example)[7] | Multi-repo workspace aggregator driven by the `ws:*` orchestration goals. |
 
 ## [#the-badge](#the-badge)The badge
 
@@ -57,12 +59,12 @@ Each variant is available as `SVG` (use this on the web — sharp at any size, ~
 
 | Variant | SVG | PNG | PDF |
 | --- | --- | --- | --- |
-| color-on-light | [svg](https://ike.network/brand/powered-by/powered-by-ike-color-on-light.svg)[6] | [png](https://ike.network/brand/powered-by/powered-by-ike-color-on-light.png)[7] | [pdf](https://ike.network/brand/powered-by/powered-by-ike-color-on-light.pdf)[8] |
-| color-on-dark | [svg](https://ike.network/brand/powered-by/powered-by-ike-color-on-dark.svg)[9] | [png](https://ike.network/brand/powered-by/powered-by-ike-color-on-dark.png)[10] | [pdf](https://ike.network/brand/powered-by/powered-by-ike-color-on-dark.pdf)[11] |
-| mono-on-light | [svg](https://ike.network/brand/powered-by/powered-by-ike-mono-on-light.svg)[12] | [png](https://ike.network/brand/powered-by/powered-by-ike-mono-on-light.png)[13] | [pdf](https://ike.network/brand/powered-by/powered-by-ike-mono-on-light.pdf)[14] |
-| mono-on-dark | [svg](https://ike.network/brand/powered-by/powered-by-ike-mono-on-dark.svg)[15] | [png](https://ike.network/brand/powered-by/powered-by-ike-mono-on-dark.png)[16] | [pdf](https://ike.network/brand/powered-by/powered-by-ike-mono-on-dark.pdf)[17] |
+| color-on-light | [svg](https://ike.network/brand/powered-by/powered-by-ike-color-on-light.svg)[8] | [png](https://ike.network/brand/powered-by/powered-by-ike-color-on-light.png)[9] | [pdf](https://ike.network/brand/powered-by/powered-by-ike-color-on-light.pdf)[10] |
+| color-on-dark | [svg](https://ike.network/brand/powered-by/powered-by-ike-color-on-dark.svg)[11] | [png](https://ike.network/brand/powered-by/powered-by-ike-color-on-dark.png)[12] | [pdf](https://ike.network/brand/powered-by/powered-by-ike-color-on-dark.pdf)[13] |
+| mono-on-light | [svg](https://ike.network/brand/powered-by/powered-by-ike-mono-on-light.svg)[14] | [png](https://ike.network/brand/powered-by/powered-by-ike-mono-on-light.png)[15] | [pdf](https://ike.network/brand/powered-by/powered-by-ike-mono-on-light.pdf)[16] |
+| mono-on-dark | [svg](https://ike.network/brand/powered-by/powered-by-ike-mono-on-dark.svg)[17] | [png](https://ike.network/brand/powered-by/powered-by-ike-mono-on-dark.png)[18] | [pdf](https://ike.network/brand/powered-by/powered-by-ike-mono-on-dark.pdf)[19] |
 
-Or download everything as a pack: [powered-by-ike-original-pack.zip](https://ike.network/brand/powered-by/powered-by-ike-original-pack.zip)[18].
+Or download everything as a pack: [powered-by-ike-original-pack.zip](https://ike.network/brand/powered-by/powered-by-ike-original-pack.zip)[20].
 
 ## [#use-it-in-a-readme](#use-it-in-a-readme)Use it in a README
 
@@ -98,7 +100,7 @@ Hot-linking these URLs is fine — they are served from a CDN. You may also self
 
 ## [#usage-rules](#usage-rules)Usage rules
 
-The badge is provided for projects, products, and pages that build on or integrate with IKE Network software. Display it to indicate that relationship, and link it back to [https://ike.network](https://ike.network)[19].
+The badge is provided for projects, products, and pages that build on or integrate with IKE Network software. Display it to indicate that relationship, and link it back to [https://ike.network](https://ike.network)[21].
 
 Keep it legible and unmodified:
 
