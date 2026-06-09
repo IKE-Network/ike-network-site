@@ -1,10 +1,59 @@
-= Powered by IKE — Brand Badge
+= Powered by IKE
 :icons: font
 :badge-base: https://ike.network/brand/powered-by
 
-Building on or integrating with IKE Network software? Show it with the
-*Powered by IKE* badge. This page has the files, the usage rules, and
-copy-paste snippets for your README or website.
+The *Powered by IKE* badge marks the projects, products, and pages built on the
+Integrated Knowledge Exchange — and links them back to the community building it.
+
+== What it means to be Powered by IKE
+
+IKE is a foundation of versioned knowledge graphs with pluggable formalisms.
+Every vertex carries STAMP coordinates — Status, Time, Author, Module, Path — so a
+project can say not just _what_ is true, but _when_ it was true, _who_ asserted it,
+and _how_ one version relates to the next. Change-sets are first-class, so
+work-in-progress curation and published, finalized artifacts run on the same
+machinery rather than bolted-on process.
+
+It doesn't replace the standards you already use. SNOMED, LOINC, and RxNorm carry
+the world's clinical meaning but stop just short of the part a computer needs. IKE
+adds the layer beneath — the number, the unit, the provenance — so a code you
+already record becomes something a quality measure, a registry, or a model can
+compute, and can show its work.
+
+Displaying the badge says your project stands on that foundation: the knowledge
+underneath is versioned, traceable, and shared. It is also a way for everyone
+building in the open to find each other.
+
+== Who's building on IKE
+
+A directory of projects and collaborators built on IKE. Building something on the
+foundation? mailto:info@ike.network[Tell us] and we'll add you.
+
+=== Community and collaborators
+
+[cols="1,2",options="header"]
+|===
+| Project | What it is
+| https://github.com/knowledge-graphlet/komet-claude-plugin[komet-claude-plugin]
+| In-Komet Claude assistant — read-only LLM tools that execute in-process over the
+  live knowledge graph. Inherits `ike-parent`.
+|===
+
+=== Reference projects from the IKE Network
+
+The templates new projects start from, each built on the IKE foundation:
+
+[cols="1,2",options="header"]
+|===
+| Project | What it is
+| https://github.com/IKE-Network/project-example[project-example]
+| Java + docs reference template. Inherits `ike-parent`; produces a jar plus
+  rendered HTML and PDF.
+| https://github.com/IKE-Network/doc-example[doc-example]
+| Docs-only template using `ike-doc` packaging; multi-renderer PDF and HTML.
+| https://github.com/IKE-Network/workspace-reactor-example[workspace-reactor-example]
+| Multi-repo workspace aggregator driven by the `ws:*` orchestration goals.
+|===
 
 == The badge
 
