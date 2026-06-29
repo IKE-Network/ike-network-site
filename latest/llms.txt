@@ -10,6 +10,7 @@
 
 ## Other
 
+- [Goal-link spike test](https://ike.network/zz-goallink-spike-test.html.md)
 - [Maven Coordinates](https://ike.network/dependency-info.html.md)
 - [Project Distribution Management](https://ike.network/distribution-management.html.md)
 - [Project Licenses](https://ike.network/licenses.html.md)

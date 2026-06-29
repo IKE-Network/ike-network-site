@@ -6,7 +6,7 @@ canonical_url: https://ike.network/checkpoint-pipeline.html
 
 # The Komet Checkpoint Pipeline
 
-A **checkpoint** turns the entire Komet workspace — a dozen independently versioned repositories — into one reproducible, tagged snapshot, and a continuous-integration chain turns that snapshot into signed installers and a chat announcement. One command, [ws:checkpoint-publish](https://ike.network/ike-platform/latest/ike-workspace-maven-plugin/ws-goals.html#checkpoint-publish)[1], starts it; everything after the git tag is automated.
+A **checkpoint** turns the entire Komet workspace — a dozen independently versioned repositories — into one reproducible, tagged snapshot, and a continuous-integration chain turns that snapshot into signed installers and a chat announcement. One command, `ws:checkpoint-publish`, starts it; everything after the git tag is automated.
 
 This page explains the machinery end to end: the goal that cuts the checkpoint, the build that produces the `.pkg` and `.msi` installers, and the step that posts the result to Zulip. It is written for two readers — an **operator** who needs to cut a checkpoint, and an **engineer** who needs to understand or change how the pipeline works. Each stage closes with a **Where the machinery lives** note pointing into the source.
 
@@ -16,7 +16,7 @@ This page explains the machinery end to end: the goal that cuts the checkpoint, 
 
 | Stage | What happens | Where it runs |
 | --- | --- | --- |
-| **1 · Cut** | [ws:checkpoint-publish](https://ike.network/ike-platform/latest/ike-workspace-maven-plugin/ws-goals.html#checkpoint-publish)[1] aligns versions, verifies the reactor builds, tags every subproject and the workspace aggregator at their current `HEAD`, writes a checkpoint manifest, and pushes. | Operator’s machine, via the `ws` plugin (`ike-platform`). |
+| **1 · Cut** | `ws:checkpoint-publish` aligns versions, verifies the reactor builds, tags every subproject and the workspace aggregator at their current `HEAD`, writes a checkpoint manifest, and pushes. | Operator’s machine, via the `ws` plugin (`ike-platform`). |
 | **2 · Build** | The pushed `checkpoint/*` tag triggers TeamCity, which builds native installers with JReleaser + `jpackage`, signs them, and notarizes the macOS package. | CI (TeamCity project **IkeKometWs**). |
 | **3 · Announce** | The publish build creates a GitHub pre-release from both installers and posts an announcement, with a generated changelog, to Zulip. | CI, via the `notify-zulip.sh` step (`ike-ci`). |
 
@@ -26,10 +26,10 @@ A checkpoint is a **coordinated tag across the whole working set**. Because Kome
 
 The goal ships as a **draft / publish pair** — the same convention used throughout the `ws` plugin — so you can preview before you mutate:
 
-[ws:checkpoint-draft](https://ike.network/ike-platform/latest/ike-workspace-maven-plugin/ws-goals.html#checkpoint-publish)[1] Read-only preview. Runs the preflight checks and prints the tag it would create and the SHAs it would capture, writing nothing. [ws:checkpoint-publish](https://ike.network/ike-platform/latest/ike-workspace-maven-plugin/ws-goals.html#checkpoint-publish)[1] The mutation. It extends the draft behavior with four safeguards, in order: 
+`ws:checkpoint-draft` Read-only preview. Runs the preflight checks and prints the tag it would create and the SHAs it would capture, writing nothing. `ws:checkpoint-publish` The mutation. It extends the draft behavior with four safeguards, in order: 
 
 1. **Require a clean working set** — every subproject tree must match its committed `HEAD`, so the tag is reproducible.
-2. **Auto-align** — runs [ws:align-publish](https://ike.network/ike-platform/latest/ike-workspace-maven-plugin/ws-goals.html#align-publish)[2] to apply inter-subproject version alignment, committing any changes as a `workspace: pre-checkpoint alignment` commit.
+2. **Auto-align** — runs `ws:align-publish` to apply inter-subproject version alignment, committing any changes as a `workspace: pre-checkpoint alignment` commit.
 3. **Verify the reactor** — runs `clean verify -DskipTests` across the whole reactor and refuses to cut a checkpoint that does not build. (Skippable with `-Dws.checkpoint.skipVerify=true` when you have already built.)
 4. **Tag and push** — in topological order, tags each subproject `checkpoint/<name>`, writes the manifest to `checkpoints/checkpoint-<name>.yaml`, updates `workspace.yaml` with the captured SHAs, tags the aggregator, and pushes tags and branch to `origin`.
 
@@ -62,7 +62,7 @@ Module `ike-workspace-maven-plugin` in **ike-platform**, package `network.ike.pl
 - `CheckpointSupport` — the per-subproject tag-and-push engine, and the draft preview.
 - `SubprojectSnapshot` — the immutable `(name, sha, branch, version, modified)` record written into the checkpoint YAML.
 
-Repository: [IKE-Network/ike-platform](https://github.com/IKE-Network/ike-platform)[3].
+Repository: [IKE-Network/ike-platform](https://github.com/IKE-Network/ike-platform)[1].
 
 ## [#stage-2--build-the-installers](#stage-2--build-the-installers)Stage 2 — Build the installers
 
@@ -77,10 +77,10 @@ On macOS the package must additionally pass Apple’s signing and notarization g
 
 | Goal | What it does |
 | --- | --- |
-| [ike:jpackage-props](https://ike.network/ike-tooling/latest/ike-maven-plugin/index.html#jpackage-props)[4] | Computes the ~19 derived properties JReleaser needs — build timestamp, platform triple, and the date-based app version (with the Windows minor ≤ 255 constraint handled separately). |
-| [ike:codesign-natives](https://ike.network/ike-tooling/latest/ike-maven-plugin/index.html#codesign-natives)[5] | Signs every native library (`.dylib`/`.jnilib`), including those nested inside JARs (JNA, RocksDB), with the hardened-runtime entitlements Apple Silicon requires — without them the JVM crashes on launch. |
-| [ike:codesign-pkg](https://ike.network/ike-tooling/latest/ike-maven-plugin/index.html#codesign-pkg)[6] | Re-signs the `.app` bundle inside the `.pkg` with entitlements (a workaround for older JDKs; auto-skips on JDK 25.0.2+ where `jpackage` signs correctly). |
-| [ike:notarize](https://ike.network/ike-tooling/latest/ike-maven-plugin/index.html#notarize)[7] | Submits the package to Apple’s notary service, waits for acceptance, staples the ticket, and verifies it with `spctl`. |
+| `ike:jpackage-props` | Computes the ~19 derived properties JReleaser needs — build timestamp, platform triple, and the date-based app version (with the Windows minor ≤ 255 constraint handled separately). |
+| `ike:codesign-natives` | Signs every native library (`.dylib`/`.jnilib`), including those nested inside JARs (JNA, RocksDB), with the hardened-runtime entitlements Apple Silicon requires — without them the JVM crashes on launch. |
+| `ike:codesign-pkg` | Re-signs the `.app` bundle inside the `.pkg` with entitlements (a workaround for older JDKs; auto-skips on JDK 25.0.2+ where `jpackage` signs correctly). |
+| `ike:notarize` | Submits the package to Apple’s notary service, waits for acceptance, staples the ticket, and verifies it with `spctl`. |
 
 The same `komet-desktop` build runs locally in **fast-dev** mode by default — it produces only the `jlink` runtime image and skips installer, signing, and notarization. The full installer path activates with `IKE_RELEASE=1` (the `signed-installer` profile), which is what CI sets.
 
@@ -108,12 +108,12 @@ The announcement is produced by `notify-zulip.sh`, the shared notifier used acro
 - posts terse progress as the chain advances, then a rich summary — a generated "what changed" changelog plus links to the release — on the final build;
 - is **best-effort**: a notification failure is logged but never fails the release.
 
-The changelog body comes from the `ike` plugin’s release-notes machinery ([ike:release-changelog](https://ike.network/ike-tooling/latest/ike-maven-plugin/index.html#release-goals)[8] / `ReleaseNotesSupport`), which derives entries from commit trailers and the GitHub milestone, so the human-readable "what changed" is generated, not hand-written.
+The changelog body comes from the `ike` plugin’s release-notes machinery (`ike:release-changelog` / `ReleaseNotesSupport`), which derives entries from commit trailers and the GitHub milestone, so the human-readable "what changed" is generated, not hand-written.
 
 Where the machinery lives  
 
 - `notify-zulip.sh` — the notifier, embedded as the final build step of each release/publish configuration in **ike-ci** (`.teamcity/`).
-- `IkeReleaseChangelogMojo` ([ike:release-changelog](https://ike.network/ike-tooling/latest/ike-maven-plugin/index.html#release-goals)[8]) and `ReleaseNotesSupport` in **ike-tooling** — generate the changelog the notification and the GitHub release share.
+- `IkeReleaseChangelogMojo` (`ike:release-changelog`) and `ReleaseNotesSupport` in **ike-tooling** — generate the changelog the notification and the GitHub release share.
 
 Stream, bot identity, and API key are TeamCity project parameters sourced from 1Password; no secret is committed. The operator-facing release and CI topology is documented in `release-operations.adoc` in **ike-infrastructure**.
 
@@ -121,7 +121,7 @@ Stream, bot identity, and API key are TeamCity project parameters sourced from 1
 
 | Repository | What it contributes |
 | --- | --- |
-| [ike-platform](https://github.com/IKE-Network/ike-platform)[3] | The [ws:checkpoint-draft](https://ike.network/ike-platform/latest/ike-workspace-maven-plugin/ws-goals.html#checkpoint-publish)[1] / [ws:checkpoint-publish](https://ike.network/ike-platform/latest/ike-workspace-maven-plugin/ws-goals.html#checkpoint-publish)[1] goals (Stage 1). |
-| [ike-tooling](https://github.com/IKE-Network/ike-tooling)[9] | The `ike:*` installer, signing, notarization, and changelog goals (Stages 2–3). |
-| [ike-komet-wsr](https://github.com/IKE-Network/ike-komet-wsr)[10] | The Komet workspace and `komet-desktop’s JReleaser/installer config (Stage 2). |
-| [ike-ci](https://github.com/IKE-Network/ike-ci)[11] | The TeamCity configuration and `notify-zulip.sh` (Stages 2–3). |
+| [ike-platform](https://github.com/IKE-Network/ike-platform)[1] | The `ws:checkpoint-draft` / `ws:checkpoint-publish` goals (Stage 1). |
+| [ike-tooling](https://github.com/IKE-Network/ike-tooling)[2] | The `ike:*` installer, signing, notarization, and changelog goals (Stages 2–3). |
+| [ike-komet-wsr](https://github.com/IKE-Network/ike-komet-wsr)[3] | The Komet workspace and `komet-desktop’s JReleaser/installer config (Stage 2). |
+| [ike-ci](https://github.com/IKE-Network/ike-ci)[4] | The TeamCity configuration and `notify-zulip.sh` (Stages 2–3). |
