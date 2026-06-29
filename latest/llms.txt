@@ -5,8 +5,8 @@
 ## IKE Network
 
 - [Powered by IKE](https://ike.network/brand.html.md)
-- [IKE Network](https://ike.network/index.html.md)
 - [The Komet Checkpoint Pipeline](https://ike.network/checkpoint-pipeline.html.md)
+- [IKE Network](https://ike.network/index.html.md)
 
 ## Other
 
@@ -17,4 +17,3 @@
 - [Source Code Management](https://ike.network/scm.html.md)
 - [Project Summary](https://ike.network/summary.html.md)
 - [Project Information](https://ike.network/project-info.html.md)
-- [The Komet Checkpoint Pipeline](https://ike.network/checkpoint-pipeline.html.md)

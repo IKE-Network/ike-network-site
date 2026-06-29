@@ -140,7 +140,7 @@
 <ul class="nav nav-pills nav-stacked animate">
 <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
 <li><a href="brand.html"><i class="fas fa-file-alt"></i> Powered by IKE</a></li>
-<li><a href="ike-network-site/checkpoint-pipeline.html"><i class="fas fa-file-alt"></i> Checkpoint Pipeline</a></li>
+<li class="active"><a href="checkpoint-pipeline.html" ng-click="hideSubItems = !hideSubItems"><i class="fas fa-file-alt"></i> Checkpoint Pipeline</a></li>
 </ul>
 		<h5 class="text-uppercase">Foundation</h5>
 
@@ -202,7 +202,8 @@
 										</a>
 									</li>
 								<!-- menus and items -->
-									</ol>
+										<li>IKE Network</li>
+												</ol>
 							</div>
 						<div class="parents-xs visible-xs">
 								<ul class="list-group">
@@ -211,7 +212,8 @@
 										<i class="fas fa-home"></i>Home
 									</a>
 									<!-- menus and items -->
-								</ul>
+										<li class="list-group-item"><i class="fas fa-level-up-alt fa-flip-horizontal"></i>IKE Network</li>
+											</ul>
 						</div>
 <h1 id="the-komet-checkpoint-pipeline">The Komet Checkpoint Pipeline</h1>
 <p>A <strong>checkpoint</strong> turns the entire Komet workspace — a dozen independently versioned repositories — into one reproducible, tagged snapshot, and a continuous-integration chain turns that snapshot into signed installers and a chat announcement. One command, <code>ws:checkpoint-publish</code>, starts it; everything after the git tag is automated.</p>
@@ -431,7 +433,7 @@ mvn ws:checkpoint-publish</code></pre>
 								<li>[4] https://github.com/IKE-Network/ike-ci</li>
 								</ul>
 							</div>
-<div class="date">Date: <strong>2026-06-29 11:06:57 -0700</strong></div>
+<div class="date">Date: <strong>2026-06-29 11:39:22 -0700</strong></div>
 						</div>
 						</div>
 					</div>
@@ -563,7 +565,7 @@ angular.module("sentry.site").constant("SITE_MENU", [
 	parents: [{ title: "IKE Network" }]
 },
 {
-	path: "ike-network-site/checkpoint-pipeline.html",
+	path: "checkpoint-pipeline.html",
 	title: "Checkpoint Pipeline",
 	parents: [{ title: "IKE Network" }]
 },
