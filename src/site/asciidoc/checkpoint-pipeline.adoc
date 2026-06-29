@@ -1,13 +1,10 @@
 = The Komet Checkpoint Pipeline
 :icons: font
-// Goal-doc base URLs — always resolve to the LATEST published goal reference
-:ws-goals: https://ike.network/ike-platform/latest/ike-workspace-maven-plugin/ws-goals.html
-:ike-goals: https://ike.network/ike-tooling/latest/ike-maven-plugin/index.html
 
 A *checkpoint* turns the entire Komet workspace — a dozen independently
 versioned repositories — into one reproducible, tagged snapshot, and a
 continuous-integration chain turns that snapshot into signed installers
-and a chat announcement. One command, link:{ws-goals}#checkpoint-publish[`ws:checkpoint-publish`], starts it;
+and a chat announcement. One command, `ws:checkpoint-publish`, starts it;
 everything after the git tag is automated.
 
 This page explains the machinery end to end: the goal that cuts the
@@ -25,7 +22,7 @@ image::https://kroki.komet.sh/graphviz/svg/eNqdk99P2zAQx9_5K05B2gv9QdKJlrWptEaFo
 |===
 | Stage | What happens | Where it runs
 | *1 · Cut*
-| link:{ws-goals}#checkpoint-publish[`ws:checkpoint-publish`] aligns versions, verifies the reactor builds,
+| `ws:checkpoint-publish` aligns versions, verifies the reactor builds,
   tags every subproject and the workspace aggregator at their current
   `HEAD`, writes a checkpoint manifest, and pushes.
 | Operator's machine, via the `ws` plugin (`ike-platform`).
@@ -51,16 +48,16 @@ reproducible from one name.
 The goal ships as a *draft / publish pair* — the same convention used
 throughout the `ws` plugin — so you can preview before you mutate:
 
-link:{ws-goals}#checkpoint-publish[`ws:checkpoint-draft`]:: Read-only preview. Runs the preflight checks and
+`ws:checkpoint-draft`:: Read-only preview. Runs the preflight checks and
 prints the tag it would create and the SHAs it would capture, writing
 nothing.
 
-link:{ws-goals}#checkpoint-publish[`ws:checkpoint-publish`]:: The mutation. It extends the draft behavior with
+`ws:checkpoint-publish`:: The mutation. It extends the draft behavior with
 four safeguards, in order:
 +
 . *Require a clean working set* — every subproject tree must match its
   committed `HEAD`, so the tag is reproducible.
-. *Auto-align* — runs link:{ws-goals}#align-publish[`ws:align-publish`] to apply inter-subproject version
+. *Auto-align* — runs `ws:align-publish` to apply inter-subproject version
   alignment, committing any changes as a `workspace: pre-checkpoint
   alignment` commit.
 . *Verify the reactor* — runs `clean verify -DskipTests` across the whole
@@ -145,19 +142,19 @@ come in. They run as Maven phases around the `jpackage` step:
 [cols="1,3",options="header"]
 |===
 | Goal | What it does
-| link:{ike-goals}#jpackage-props[`ike:jpackage-props`]
+| `ike:jpackage-props`
 | Computes the ~19 derived properties JReleaser needs — build timestamp,
   platform triple, and the date-based app version (with the Windows
   minor ≤ 255 constraint handled separately).
-| link:{ike-goals}#codesign-natives[`ike:codesign-natives`]
+| `ike:codesign-natives`
 | Signs every native library (`.dylib`/`.jnilib`), including those nested
   inside JARs (JNA, RocksDB), with the hardened-runtime entitlements
   Apple Silicon requires — without them the JVM crashes on launch.
-| link:{ike-goals}#codesign-pkg[`ike:codesign-pkg`]
+| `ike:codesign-pkg`
 | Re-signs the `.app` bundle inside the `.pkg` with entitlements (a
   workaround for older JDKs; auto-skips on JDK 25.0.2+ where `jpackage`
   signs correctly).
-| link:{ike-goals}#notarize[`ike:notarize`]
+| `ike:notarize`
 | Submits the package to Apple's notary service, waits for acceptance,
   staples the ticket, and verifies it with `spctl`.
 |===
@@ -215,7 +212,7 @@ used across IKE release pipelines. It:
   release.
 
 The changelog body comes from the `ike` plugin's release-notes machinery
-(link:{ike-goals}#release-goals[`ike:release-changelog`] / `ReleaseNotesSupport`), which derives entries
+(`ike:release-changelog` / `ReleaseNotesSupport`), which derives entries
 from commit trailers and the GitHub milestone, so the human-readable
 "what changed" is generated, not hand-written.
 
@@ -224,7 +221,7 @@ from commit trailers and the GitHub milestone, so the human-readable
 ====
 * `notify-zulip.sh` — the notifier, embedded as the final build step of
   each release/publish configuration in *ike-ci* (`.teamcity/`).
-* `IkeReleaseChangelogMojo` (link:{ike-goals}#release-goals[`ike:release-changelog`]) and
+* `IkeReleaseChangelogMojo` (`ike:release-changelog`) and
   `ReleaseNotesSupport` in *ike-tooling* — generate the changelog the
   notification and the GitHub release share.
 
@@ -239,7 +236,7 @@ topology is documented in `release-operations.adoc` in *ike-infrastructure*.
 |===
 | Repository | What it contributes
 | https://github.com/IKE-Network/ike-platform[ike-platform]
-| The link:{ws-goals}#checkpoint-publish[`ws:checkpoint-draft`] / link:{ws-goals}#checkpoint-publish[`ws:checkpoint-publish`] goals (Stage 1).
+| The `ws:checkpoint-draft` / `ws:checkpoint-publish` goals (Stage 1).
 | https://github.com/IKE-Network/ike-tooling[ike-tooling]
 | The `ike:*` installer, signing, notarization, and changelog goals
   (Stages 2–3).
