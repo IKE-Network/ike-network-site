@@ -1,0 +1,127 @@
+---
+date_published: 2026-05-10
+date_modified: 2026-05-10
+canonical_url: https://ike.network/checkpoint-pipeline.html
+---
+
+# The Komet Checkpoint Pipeline
+
+A **checkpoint** turns the entire Komet workspace — a dozen independently versioned repositories — into one reproducible, tagged snapshot, and a continuous-integration chain turns that snapshot into signed installers and a chat announcement. One command, `ws:checkpoint-publish`, starts it; everything after the git tag is automated.
+
+This page explains the machinery end to end: the goal that cuts the checkpoint, the build that produces the `.pkg` and `.msi` installers, and the step that posts the result to Zulip. It is written for two readers — an **operator** who needs to cut a checkpoint, and an **engineer** who needs to understand or change how the pipeline works. Each stage closes with a **Where the machinery lives** note pointing into the source.
+
+## [#the-three-stages](#the-three-stages)The three stages
+
+![The Komet checkpoint pipeline](https://kroki.komet.sh/graphviz/svg/eNqtU9uO0zAQfecrRuGlqKTbggS7lKwEEVoqeFohIbGtkJNMXTeObdkOSxetxEfsv_DOp_AljJ1NL8vlafOQaMZn5sw5GVeCW2ZWcAbfHgBYpupK2Oz9-ZSigpdaapslnvLOMIvKJ-FA6Qrhwq2YwazQX8H5jcQssbpVFVaPl0JKrBII39sOD5fxSaCP85Pj_E1OGK28Yg1Vz5RH2yWcuMJsMoGGWS5UNh5NjheBFytOvH2L5-zZko3_1-KEqqjMtUUnspStI8TnsvVRLoBkBcosmcDPH5BTFgaXDoxsiRZ-fb8BUWNqJPNLbZtHUTvcUZtM72qa_jHRdE_VuGtSGnpd3NJfuhflCsvaaKF8atpCCrdKFh3SM75D7mBHLwPD6Vxx4SNGK8AvaDdzRXqN1WssPQyBcW6RM69t35Co09NQEsLrvxpUtEJWhxY9CRa9jnkY1LpBn1boaq8NkQSbvNZSKE7RB2RNLvzmfg0Te4b1DDCr8V2Y5aObK6GcZ7R5FuL4rtcb8ttKJ7jCCkam5nAEo8aJuVobVtaMVmsIa5JQz9WQVtwzS_xb00QwLbT6t2tMKZJY4qFxT4Nxr_ojGASvSnGv3liUe-acCf-2LcBYTOkAmduKuGqlMFvcpxj1Qzfhci92_UhthG_lxj2k7MGPCElvBedoHeSzrkE0nJBxrB65t9XXvwGNE2_e) 
+
+| Stage | What happens | Where it runs |
+| --- | --- | --- |
+| **1 · Cut** | `ws:checkpoint-publish` aligns versions, verifies the reactor builds, tags every subproject and the workspace aggregator at their current `HEAD`, writes a checkpoint manifest, and pushes. | Operator’s machine, via the `ws` plugin (`ike-platform`). |
+| **2 · Build** | The pushed `checkpoint/*` tag triggers TeamCity, which builds native installers with JReleaser + `jpackage`, signs them, and notarizes the macOS package. | CI (TeamCity project **IkeKometWs**). |
+| **3 · Announce** | The publish build creates a GitHub pre-release from both installers and posts an announcement, with a generated changelog, to Zulip. | CI, via the `notify-zulip.sh` step (`ike-ci`). |
+
+## [#stage-1--cut-the-checkpoint](#stage-1--cut-the-checkpoint)Stage 1 — Cut the checkpoint
+
+A checkpoint is a **coordinated tag across the whole working set**. Because Komet is assembled from many repositories, a single repo’s commit hash says nothing about whether the assembly builds. The checkpoint records the exact SHA, branch, and version of every member so the assembly is reproducible from one name.
+
+The goal ships as a **draft / publish pair** — the same convention used throughout the `ws` plugin — so you can preview before you mutate:
+
+`ws:checkpoint-draft` Read-only preview. Runs the preflight checks and prints the tag it would create and the SHAs it would capture, writing nothing. `ws:checkpoint-publish` The mutation. It extends the draft behavior with four safeguards, in order: 
+
+1. **Require a clean working set** — every subproject tree must match its committed `HEAD`, so the tag is reproducible.
+2. **Auto-align** — runs `ws:align-publish` to apply inter-subproject version alignment, committing any changes as a `workspace: pre-checkpoint alignment` commit.
+3. **Verify the reactor** — runs `clean verify -DskipTests` across the whole reactor and refuses to cut a checkpoint that does not build. (Skippable with `-Dws.checkpoint.skipVerify=true` when you have already built.)
+4. **Tag and push** — in topological order, tags each subproject `checkpoint/<name>`, writes the manifest to `checkpoints/checkpoint-<name>.yaml`, updates `workspace.yaml` with the captured SHAs, tags the aggregator, and pushes tags and branch to `origin`.
+
+The checkpoint name defaults to `<branch>-<yyyyMMdd>-<HHmmss>` (UTC), e.g. `main-20260622-030143`. That timestamped name becomes the tag, the manifest filename, and the logical branch CI builds against.
+
+**Operator quickstart** — from the workspace root (`ike-komet-wsr`), always through `ws` goals, never raw git:
+
+```
+# 1. Commit any work-in-progress (needs a Refs:/Fixes: issue trailer)
+mvn ws:commit-publish -Dpush=false -Dmessage="..."
+
+# 2. Push the commits
+mvn ws:push
+
+# 3. Preview the checkpoint
+mvn ws:checkpoint-draft
+
+# 4. Cut and push it (tag + manifest + push are atomic)
+mvn ws:checkpoint-publish
+```
+
+`checkpoint-publish` tags and pushes in one step — there is no separate push toggle. Cutting from a freshly scaffolded clone needs care: the scaffold step leaves regenerable noise (wrapper files, `CLAUDE.md` edits) in each subproject tree, and the clean-tree preflight will refuse until that is stashed.
+
+Where the machinery lives  
+
+Module `ike-workspace-maven-plugin` in **ike-platform**, package `network.ike.plugin.ws`:
+
+- `WsCheckpointDraftMojo` — `@Mojo(name = "checkpoint-draft")`; the preflight, name derivation, and per-subproject tagging loop.
+- `WsCheckpointPublishMojo` — `@Mojo(name = "checkpoint-publish")`; extends the draft with the clean-state, auto-align, reactor-verify, and push safeguards.
+- `CheckpointSupport` — the per-subproject tag-and-push engine, and the draft preview.
+- `SubprojectSnapshot` — the immutable `(name, sha, branch, version, modified)` record written into the checkpoint YAML.
+
+Repository: [IKE-Network/ike-platform](https://github.com/IKE-Network/ike-platform)[1].
+
+## [#stage-2--build-the-installers](#stage-2--build-the-installers)Stage 2 — Build the installers
+
+The pushed `checkpoint/****`** tag is the trigger. TeamCity project *IkeKometWs** discovers the tag and runs two installer builds — macOS and Windows — that each rebuild the tagged assembly into a native, signed package. Installers are date-versioned (e.g. `26.625.118-osx-aarch64`), so no workspace `SNAPSHOT` qualifier ever reaches the shipped file.
+
+The installer itself is assembled by **JReleaser** driving the JDK’s `jlink` and `jpackage`:
+
+- **jlink** produces a trimmed Java runtime image containing only the modules Komet needs, plus JVM options and resources.
+- **jpackage** wraps that image into a platform-native installer — `.pkg` on macOS, `.msi` on Windows, with `.rpm`/`.dmg` variants available.
+
+On macOS the package must additionally pass Apple’s signing and notarization gauntlet, which is where the `ike` plugin’s installer goals come in. They run as Maven phases around the `jpackage` step:
+
+| Goal | What it does |
+| --- | --- |
+| `ike:jpackage-props` | Computes the ~19 derived properties JReleaser needs — build timestamp, platform triple, and the date-based app version (with the Windows minor ≤ 255 constraint handled separately). |
+| `ike:codesign-natives` | Signs every native library (`.dylib`/`.jnilib`), including those nested inside JARs (JNA, RocksDB), with the hardened-runtime entitlements Apple Silicon requires — without them the JVM crashes on launch. |
+| `ike:codesign-pkg` | Re-signs the `.app` bundle inside the `.pkg` with entitlements (a workaround for older JDKs; auto-skips on JDK 25.0.2+ where `jpackage` signs correctly). |
+| `ike:notarize` | Submits the package to Apple’s notary service, waits for acceptance, staples the ticket, and verifies it with `spctl`. |
+
+The same `komet-desktop` build runs locally in **fast-dev** mode by default — it produces only the `jlink` runtime image and skips installer, signing, and notarization. The full installer path activates with `IKE_RELEASE=1` (the `signed-installer` profile), which is what CI sets.
+
+A recurring non-code failure: notarization can return Apple **HTTP 403 — "a required agreement is missing or has expired."** That is the Apple Developer account’s license agreement needing re-acceptance, not a build problem.
+
+Where the machinery lives  
+
+JReleaser config in **komet-desktop** (inside the `ike-komet-wsr` workspace):
+
+- `src/main/jreleaser/jreleaser.yml` — the `jpackage` assembler (`.pkg`/`.msi`/`.rpm`, signing, icons, resources).
+- `src/main/jreleaser/jreleaser-jlink.yml` — the `jlink` assemblers (runtime images, JVM options, file sets).
+- `src/main/resources/installer/` — platform installer assets (entitlements plist, backgrounds, Windows icon).
+
+Installer/signing goals in `ike-maven-plugin` (**ike-tooling**), package `network.ike.plugin`: `JpackagePropsMojo`, `CodesignNativesMojo`, `CodesignPkgMojo`, `NotarizeMojo`.
+
+CI build configurations: TeamCity project **IkeKometWs** (`InstallerMacOS`, `InstallerWindows`).
+
+## [#stage-3--announce-to-zulip](#stage-3--announce-to-zulip)Stage 3 — Announce to Zulip
+
+When both installer builds are green, the publish build (**IkeKometWs · Publish to GitHub**) creates a GitHub **pre-release** and attaches both installers, then posts an announcement to Zulip so the team — and watchers — learn a fresh build is available.
+
+The announcement is produced by `notify-zulip.sh`, the shared notifier used across IKE release pipelines. It:
+
+- resolves the target stream and finds-or-creates a topic, so a multi-step release threads under a single conversation rather than spamming one message per build;
+- posts terse progress as the chain advances, then a rich summary — a generated "what changed" changelog plus links to the release — on the final build;
+- is **best-effort**: a notification failure is logged but never fails the release.
+
+The changelog body comes from the `ike` plugin’s release-notes machinery (`ike:release-changelog` / `ReleaseNotesSupport`), which derives entries from commit trailers and the GitHub milestone, so the human-readable "what changed" is generated, not hand-written.
+
+Where the machinery lives  
+
+- `notify-zulip.sh` — the notifier, embedded as the final build step of each release/publish configuration in **ike-ci** (`.teamcity/`).
+- `IkeReleaseChangelogMojo` (`ike:release-changelog`) and `ReleaseNotesSupport` in **ike-tooling** — generate the changelog the notification and the GitHub release share.
+
+Stream, bot identity, and API key are TeamCity project parameters sourced from 1Password; no secret is committed. The operator-facing release and CI topology is documented in `release-operations.adoc` in **ike-infrastructure**.
+
+## [#source-repositories](#source-repositories)Source repositories
+
+| Repository | What it contributes |
+| --- | --- |
+| [ike-platform](https://github.com/IKE-Network/ike-platform)[1] | The `ws:checkpoint-draft` / `ws:checkpoint-publish` goals (Stage 1). |
+| [ike-tooling](https://github.com/IKE-Network/ike-tooling)[2] | The `ike:*` installer, signing, notarization, and changelog goals (Stages 2–3). |
+| [ike-komet-wsr](https://github.com/IKE-Network/ike-komet-wsr)[3] | The Komet workspace and `komet-desktop’s JReleaser/installer config (Stage 2). |
+| [ike-ci](https://github.com/IKE-Network/ike-ci)[4] | The TeamCity configuration and `notify-zulip.sh` (Stages 2–3). |

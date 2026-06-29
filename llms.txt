@@ -6,6 +6,7 @@
 
 - [Powered by IKE](https://ike.network/brand.html.md)
 - [IKE Network](https://ike.network/index.html.md)
+- [The Komet Checkpoint Pipeline](https://ike.network/checkpoint-pipeline.html.md)
 
 ## Other
 

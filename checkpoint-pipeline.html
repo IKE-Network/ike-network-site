@@ -6,26 +6,26 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 
-	<title>Project Summary &ndash; IKE Network</title>
+	<title>The Komet Checkpoint Pipeline &ndash; IKE Network</title>
 
 	<meta name="keywords" content="IKE,integrated knowledge exchange,sociotechnical fabric,knowledge infrastructure,IKE Network,Maven Central,ike-base-parent,ike-java-support,ike-tooling,ike-docs,ike-workspace-extension,ike-version-management-extension,ike-platform,doc-example,project-example,integration-tests-example,workspace-reactor-example" />
-	<meta name="generator" content="Maven Site Plugin, Doxia Site Renderer 2.0.0, Skin sentry-maven-skin 7.0.00, with org.apache.maven.plugins:maven-project-info-reports-plugin:3.9.0:summary" />
+	<meta name="generator" content="Maven Site Plugin, Doxia Site Renderer 2.0.0, Skin sentry-maven-skin 7.0.00, from asciidoc" />
 	<meta property="article:published_time" content="2026-05-11T00:00:00" />
 	<meta property="article:modified_time" content="2026-05-11T00:00:00" />
 
 
-	<link rel="canonical" href="https://ike.network/summary.html">
-	<link rel="alternate" type="text/markdown" href="summary.html.md">	<link rel="stylesheet" href="./css/main-combined.css">
+	<link rel="canonical" href="https://ike.network/checkpoint-pipeline.html">
+	<link rel="alternate" type="text/markdown" href="checkpoint-pipeline.html.md">	<link rel="stylesheet" href="./css/main-combined.css">
 	<link rel="stylesheet" href="./css/site.css">
 
 <script type="application/ld+json">
 {
 	"@context": "https://schema.org",
 	"@type": "TechArticle",
-	"headline": "Project Summary",
+	"headline": "The Komet Checkpoint Pipeline",
 	"datePublished": "2026-05-11T00:00:00",
 	"dateModified": "2026-05-11T00:00:00",
-	"mainEntityOfPage": "https://ike.network/summary.html",
+	"mainEntityOfPage": "https://ike.network/checkpoint-pipeline.html",
 }
 </script>
 </head>
@@ -140,7 +140,7 @@
 <ul class="nav nav-pills nav-stacked animate">
 <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
 <li><a href="brand.html"><i class="fas fa-file-alt"></i> Powered by IKE</a></li>
-<li><a href="checkpoint-pipeline.html"><i class="fas fa-file-alt"></i> Checkpoint Pipeline</a></li>
+<li class="active"><a href="checkpoint-pipeline.html" ng-click="hideSubItems = !hideSubItems"><i class="fas fa-file-alt"></i> Checkpoint Pipeline</a></li>
 </ul>
 		<h5 class="text-uppercase">Foundation</h5>
 
@@ -202,7 +202,8 @@
 										</a>
 									</li>
 								<!-- menus and items -->
-									</ol>
+										<li>IKE Network</li>
+												</ol>
 							</div>
 						<div class="parents-xs visible-xs">
 								<ul class="list-group">
@@ -211,90 +212,197 @@
 										<i class="fas fa-home"></i>Home
 									</a>
 									<!-- menus and items -->
-								</ul>
+										<li class="list-group-item"><i class="fas fa-level-up-alt fa-flip-horizontal"></i>IKE Network</li>
+											</ul>
 						</div>
-<section>
- <a id="project-summary"></a>
- <h1 id="project-summary">Project Summary</h1>
- <section>
-  <a id="project-information"></a>
-  <h2 id="project-information"><a href="#project-information">Project Information</a></h2>
-  <table class="bodyTable table table-striped table-hover">
-   <thead>
-    <tr class="a">
-     <th>Field</th>
-     <th>Value</th>
-    </tr>
-   </thead>
-   <tbody>
-    <tr class="b">
-     <td>Name</td>
-     <td>IKE Network</td>
-    </tr>
-    <tr class="a">
-     <td>Description</td>
-     <td>Organization landing page for IKE Network projects.</td>
-    </tr>
-    <tr class="b">
-     <td>Homepage</td>
-     <td><a href="https://ike.network">https://ike.network</a><sup class="visible-print-inline">[1]</sup></td>
-    </tr>
-   </tbody>
-  </table>
- </section>
- <section>
-  <a id="project-organization"></a>
-  <h2 id="project-organization"><a href="#project-organization">Project Organization</a></h2>
-  <table class="bodyTable table table-striped table-hover">
-   <thead>
-    <tr class="a">
-     <th>Field</th>
-     <th>Value</th>
-    </tr>
-   </thead>
-   <tbody>
-    <tr class="b">
-     <td>Name</td>
-     <td>IKE Network</td>
-    </tr>
-    <tr class="a">
-     <td>URL</td>
-     <td><a href="https://ike.network">https://ike.network</a><sup class="visible-print-inline">[1]</sup></td>
-    </tr>
-   </tbody>
-  </table>
- </section>
- <section>
-  <a id="build-information"></a>
-  <h2 id="build-information"><a href="#build-information">Build Information</a></h2>
-  <table class="bodyTable table table-striped table-hover">
-   <thead>
-    <tr class="a">
-     <th>Field</th>
-     <th>Value</th>
-    </tr>
-   </thead>
-   <tbody>
-    <tr class="b">
-     <td>GroupId</td>
-     <td>network.ike</td>
-    </tr>
-    <tr class="a">
-     <td>ArtifactId</td>
-     <td>ike-network-site</td>
-    </tr>
-    <tr class="b">
-     <td>Version</td>
-     <td>2</td>
-    </tr>
-    <tr class="a">
-     <td>Type</td>
-     <td>pom</td>
-    </tr>
-   </tbody>
-  </table>
- </section>
-</section>
+<h1 id="the-komet-checkpoint-pipeline">The Komet Checkpoint Pipeline</h1>
+<p>A <strong>checkpoint</strong> turns the entire Komet workspace — a dozen independently versioned repositories — into one reproducible, tagged snapshot, and a continuous-integration chain turns that snapshot into signed installers and a chat announcement. One command, <code>ws:checkpoint-publish</code>, starts it; everything after the git tag is automated.</p>
+<p>This page explains the machinery end to end: the goal that cuts the checkpoint, the build that produces the <code>.pkg</code> and <code>.msi</code> installers, and the step that posts the result to Zulip. It is written for two readers — an <strong>operator</strong> who needs to cut a checkpoint, and an <strong>engineer</strong> who needs to understand or change how the pipeline works. Each stage closes with a <strong>Where the machinery lives</strong> note pointing into the source.</p>
+<div>
+ <h2 id="the-three-stages"><a href="#the-three-stages"></a><a id="the-three-stages"></a>The three stages</h2>
+ <div>
+  <img src="https://kroki.komet.sh/graphviz/svg/eNqtU9uO0zAQfecrRuGlqKTbggS7lKwEEVoqeFohIbGtkJNMXTeObdkOSxetxEfsv_DOp_AljJ1NL8vlafOQaMZn5sw5GVeCW2ZWcAbfHgBYpupK2Oz9-ZSigpdaapslnvLOMIvKJ-FA6Qrhwq2YwazQX8H5jcQssbpVFVaPl0JKrBII39sOD5fxSaCP85Pj_E1OGK28Yg1Vz5RH2yWcuMJsMoGGWS5UNh5NjheBFytOvH2L5-zZko3_1-KEqqjMtUUnspStI8TnsvVRLoBkBcosmcDPH5BTFgaXDoxsiRZ-fb8BUWNqJPNLbZtHUTvcUZtM72qa_jHRdE_VuGtSGnpd3NJfuhflCsvaaKF8atpCCrdKFh3SM75D7mBHLwPD6Vxx4SNGK8AvaDdzRXqN1WssPQyBcW6RM69t35Co09NQEsLrvxpUtEJWhxY9CRa9jnkY1LpBn1boaq8NkQSbvNZSKE7RB2RNLvzmfg0Te4b1DDCr8V2Y5aObK6GcZ7R5FuL4rtcb8ttKJ7jCCkam5nAEo8aJuVobVtaMVmsIa5JQz9WQVtwzS_xb00QwLbT6t2tMKZJY4qFxT4Nxr_ojGASvSnGv3liUe-acCf-2LcBYTOkAmduKuGqlMFvcpxj1Qzfhci92_UhthG_lxj2k7MGPCElvBedoHeSzrkE0nJBxrB65t9XXvwGNE2_e" alt="The Komet checkpoint pipeline">
+ </div>
+ <table class="bodyTable table table-striped table-hover" style="background: #FFFFFF">
+  <thead>
+   <tr class="a">
+    <th>Stage</th>
+    <th>What happens</th>
+    <th>Where it runs</th>
+   </tr>
+  </thead>
+  <tbody>
+   <tr class="b">
+    <td style="text-align: left;"><strong>1 · Cut</strong></td>
+    <td><code>ws:checkpoint-publish</code> aligns versions, verifies the reactor builds, tags every subproject and the workspace aggregator at their current <code>HEAD</code>, writes a checkpoint manifest, and pushes.</td>
+    <td>Operator’s machine, via the <code>ws</code> plugin (<code>ike-platform</code>).</td>
+   </tr>
+   <tr class="a">
+    <td style="text-align: left;"><strong>2 · Build</strong></td>
+    <td>The pushed <code>checkpoint/*</code> tag triggers TeamCity, which builds native installers with JReleaser + <code>jpackage</code>, signs them, and notarizes the macOS package.</td>
+    <td>CI (TeamCity project <strong>IkeKometWs</strong>).</td>
+   </tr>
+   <tr class="b">
+    <td style="text-align: left;"><strong>3 · Announce</strong></td>
+    <td>The publish build creates a GitHub pre-release from both installers and posts an announcement, with a generated changelog, to Zulip.</td>
+    <td>CI, via the <code>notify-zulip.sh</code> step (<code>ike-ci</code>).</td>
+   </tr>
+  </tbody>
+ </table>
+</div>
+<div>
+ <h2 id="stage-1--cut-the-checkpoint"><a href="#stage-1--cut-the-checkpoint"></a><a id="stage-1-cut-the-checkpoint"></a>Stage 1 — Cut the checkpoint</h2>
+ <p>A checkpoint is a <strong>coordinated tag across the whole working set</strong>. Because Komet is assembled from many repositories, a single repo’s commit hash says nothing about whether the assembly builds. The checkpoint records the exact SHA, branch, and version of every member so the assembly is reproducible from one name.</p>
+ <p>The goal ships as a <strong>draft / publish pair</strong> — the same convention used throughout the <code>ws</code> plugin — so you can preview before you mutate:</p>
+ <dl>
+  <dt>
+   <code>ws:checkpoint-draft</code>
+  </dt>
+  <dd>Read-only preview. Runs the preflight checks and prints the tag it would create and the SHAs it would capture, writing nothing.</dd>
+  <dt>
+   <code>ws:checkpoint-publish</code>
+  </dt>
+  <dd>
+   The mutation. It extends the draft behavior with four safeguards, in order:
+   <ol style="list-style-type: decimal;">
+    <li><strong>Require a clean working set</strong> — every subproject tree must match its committed <code>HEAD</code>, so the tag is reproducible.</li>
+    <li><strong>Auto-align</strong> — runs <code>ws:align-publish</code> to apply inter-subproject version alignment, committing any changes as a <code>workspace: pre-checkpoint alignment</code> commit.</li>
+    <li><strong>Verify the reactor</strong> — runs <code>clean verify -DskipTests</code> across the whole reactor and refuses to cut a checkpoint that does not build. (Skippable with <code>-Dws.checkpoint.skipVerify=true</code> when you have already built.)</li>
+    <li><strong>Tag and push</strong> — in topological order, tags each subproject <code>checkpoint/&lt;name&gt;</code>, writes the manifest to <code>checkpoints/checkpoint-&lt;name&gt;.yaml</code>, updates <code>workspace.yaml</code> with the captured SHAs, tags the aggregator, and pushes tags and branch to <code>origin</code>.</li>
+   </ol>
+  </dd>
+ </dl>
+ <p>The checkpoint name defaults to <code>&lt;branch&gt;-&lt;yyyyMMdd&gt;-&lt;HHmmss&gt;</code> (UTC), e.g. <code>main-20260622-030143</code>. That timestamped name becomes the tag, the manifest filename, and the logical branch CI builds against.</p>
+ <p><strong>Operator quickstart</strong> — from the workspace root (<code>ike-komet-wsr</code>), always through <code>ws</code> goals, never raw git:</p>
+ <div class="source">
+  <pre class="prettyprint" copy-to-clipboard=""><code># 1. Commit any work-in-progress (needs a Refs:/Fixes: issue trailer)
+mvn ws:commit-publish -Dpush=false -Dmessage="..."
+
+# 2. Push the commits
+mvn ws:push
+
+# 3. Preview the checkpoint
+mvn ws:checkpoint-draft
+
+# 4. Cut and push it (tag + manifest + push are atomic)
+mvn ws:checkpoint-publish</code></pre>
+ </div>
+ <p><code>checkpoint-publish</code> tags and pushes in one step — there is no separate push toggle. Cutting from a freshly scaffolded clone needs care: the scaffold step leaves regenerable noise (wrapper files, <code>CLAUDE.md</code> edits) in each subproject tree, and the clean-tree preflight will refuse until that is stashed.</p>
+ <div>
+  <div style="color: #7a2518; margin-bottom: .25em">Where the machinery lives</div>
+  <div style="background: #fffef7; border-color: #e0e0dc; border: 1px solid #e6e6e6; box-shadow: 0 1px 4px #e0e0dc; margin-bottom: 1.25em; padding: 1.25em">
+   <p>Module <code>ike-workspace-maven-plugin</code> in <strong>ike-platform</strong>, package <code>network.ike.plugin.ws</code>:</p>
+   <ul>
+    <li><code>WsCheckpointDraftMojo</code> — <code>@Mojo(name = "checkpoint-draft")</code>; the preflight, name derivation, and per-subproject tagging loop.</li>
+    <li><code>WsCheckpointPublishMojo</code> — <code>@Mojo(name = "checkpoint-publish")</code>; extends the draft with the clean-state, auto-align, reactor-verify, and push safeguards.</li>
+    <li><code>CheckpointSupport</code> — the per-subproject tag-and-push engine, and the draft preview.</li>
+    <li><code>SubprojectSnapshot</code> — the immutable <code>(name, sha, branch, version, modified)</code> record written into the checkpoint YAML.</li>
+   </ul>
+   <p>Repository: <a href="https://github.com/IKE-Network/ike-platform" class="externalLink">IKE-Network/ike-platform</a><sup class="visible-print-inline">[1]</sup>.</p>
+  </div>
+ </div>
+</div>
+<div>
+ <h2 id="stage-2--build-the-installers"><a href="#stage-2--build-the-installers"></a><a id="stage-2-build-the-installers"></a>Stage 2 — Build the installers</h2>
+ <p>The pushed <code>checkpoint/<strong></strong></code><strong> tag is the trigger. TeamCity project *IkeKometWs</strong> discovers the tag and runs two installer builds — macOS and Windows — that each rebuild the tagged assembly into a native, signed package. Installers are date-versioned (e.g. <code>26.625.118-osx-aarch64</code>), so no workspace <code>SNAPSHOT</code> qualifier ever reaches the shipped file.</p>
+ <p>The installer itself is assembled by <strong>JReleaser</strong> driving the JDK’s <code>jlink</code> and <code>jpackage</code>:</p>
+ <ul>
+  <li><strong>jlink</strong> produces a trimmed Java runtime image containing only the modules Komet needs, plus JVM options and resources.</li>
+  <li><strong>jpackage</strong> wraps that image into a platform-native installer — <code>.pkg</code> on macOS, <code>.msi</code> on Windows, with <code>.rpm</code>/<code>.dmg</code> variants available.</li>
+ </ul>
+ <p>On macOS the package must additionally pass Apple’s signing and notarization gauntlet, which is where the <code>ike</code> plugin’s installer goals come in. They run as Maven phases around the <code>jpackage</code> step:</p>
+ <table class="bodyTable table table-striped table-hover" style="background: #FFFFFF">
+  <thead>
+   <tr class="a">
+    <th>Goal</th>
+    <th>What it does</th>
+   </tr>
+  </thead>
+  <tbody>
+   <tr class="b">
+    <td style="text-align: left;"><code>ike:jpackage-props</code></td>
+    <td>Computes the ~19 derived properties JReleaser needs — build timestamp, platform triple, and the date-based app version (with the Windows minor ≤ 255 constraint handled separately).</td>
+   </tr>
+   <tr class="a">
+    <td style="text-align: left;"><code>ike:codesign-natives</code></td>
+    <td>Signs every native library (<code>.dylib</code>/<code>.jnilib</code>), including those nested inside JARs (JNA, RocksDB), with the hardened-runtime entitlements Apple Silicon requires — without them the JVM crashes on launch.</td>
+   </tr>
+   <tr class="b">
+    <td style="text-align: left;"><code>ike:codesign-pkg</code></td>
+    <td>Re-signs the <code>.app</code> bundle inside the <code>.pkg</code> with entitlements (a workaround for older JDKs; auto-skips on JDK 25.0.2+ where <code>jpackage</code> signs correctly).</td>
+   </tr>
+   <tr class="a">
+    <td style="text-align: left;"><code>ike:notarize</code></td>
+    <td>Submits the package to Apple’s notary service, waits for acceptance, staples the ticket, and verifies it with <code>spctl</code>.</td>
+   </tr>
+  </tbody>
+ </table>
+ <p>The same <code>komet-desktop</code> build runs locally in <strong>fast-dev</strong> mode by default — it produces only the <code>jlink</code> runtime image and skips installer, signing, and notarization. The full installer path activates with <code>IKE_RELEASE=1</code> (the <code>signed-installer</code> profile), which is what CI sets.</p>
+ <p>A recurring non-code failure: notarization can return Apple <strong>HTTP 403 — "a required agreement is missing or has expired."</strong> That is the Apple Developer account’s license agreement needing re-acceptance, not a build problem.</p>
+ <div>
+  <div style="color: #7a2518; margin-bottom: .25em">Where the machinery lives</div>
+  <div style="background: #fffef7; border-color: #e0e0dc; border: 1px solid #e6e6e6; box-shadow: 0 1px 4px #e0e0dc; margin-bottom: 1.25em; padding: 1.25em">
+   <p>JReleaser config in <strong>komet-desktop</strong> (inside the <code>ike-komet-wsr</code> workspace):</p>
+   <ul>
+    <li><code>src/main/jreleaser/jreleaser.yml</code> — the <code>jpackage</code> assembler (<code>.pkg</code>/<code>.msi</code>/<code>.rpm</code>, signing, icons, resources).</li>
+    <li><code>src/main/jreleaser/jreleaser-jlink.yml</code> — the <code>jlink</code> assemblers (runtime images, JVM options, file sets).</li>
+    <li><code>src/main/resources/installer/</code> — platform installer assets (entitlements plist, backgrounds, Windows icon).</li>
+   </ul>
+   <p>Installer/signing goals in <code>ike-maven-plugin</code> (<strong>ike-tooling</strong>), package <code>network.ike.plugin</code>: <code>JpackagePropsMojo</code>, <code>CodesignNativesMojo</code>, <code>CodesignPkgMojo</code>, <code>NotarizeMojo</code>.</p>
+   <p>CI build configurations: TeamCity project <strong>IkeKometWs</strong> (<code>InstallerMacOS</code>, <code>InstallerWindows</code>).</p>
+  </div>
+ </div>
+</div>
+<div>
+ <h2 id="stage-3--announce-to-zulip"><a href="#stage-3--announce-to-zulip"></a><a id="stage-3-announce-to-zulip"></a>Stage 3 — Announce to Zulip</h2>
+ <p>When both installer builds are green, the publish build (<strong>IkeKometWs · Publish to GitHub</strong>) creates a GitHub <strong>pre-release</strong> and attaches both installers, then posts an announcement to Zulip so the team — and watchers — learn a fresh build is available.</p>
+ <p>The announcement is produced by <code>notify-zulip.sh</code>, the shared notifier used across IKE release pipelines. It:</p>
+ <ul>
+  <li>resolves the target stream and finds-or-creates a topic, so a multi-step release threads under a single conversation rather than spamming one message per build;</li>
+  <li>posts terse progress as the chain advances, then a rich summary — a generated "what changed" changelog plus links to the release — on the final build;</li>
+  <li>is <strong>best-effort</strong>: a notification failure is logged but never fails the release.</li>
+ </ul>
+ <p>The changelog body comes from the <code>ike</code> plugin’s release-notes machinery (<code>ike:release-changelog</code> / <code>ReleaseNotesSupport</code>), which derives entries from commit trailers and the GitHub milestone, so the human-readable "what changed" is generated, not hand-written.</p>
+ <div>
+  <div style="color: #7a2518; margin-bottom: .25em">Where the machinery lives</div>
+  <div style="background: #fffef7; border-color: #e0e0dc; border: 1px solid #e6e6e6; box-shadow: 0 1px 4px #e0e0dc; margin-bottom: 1.25em; padding: 1.25em">
+   <ul>
+    <li><code>notify-zulip.sh</code> — the notifier, embedded as the final build step of each release/publish configuration in <strong>ike-ci</strong> (<code>.teamcity/</code>).</li>
+    <li><code>IkeReleaseChangelogMojo</code> (<code>ike:release-changelog</code>) and <code>ReleaseNotesSupport</code> in <strong>ike-tooling</strong> — generate the changelog the notification and the GitHub release share.</li>
+   </ul>
+   <p>Stream, bot identity, and API key are TeamCity project parameters sourced from 1Password; no secret is committed. The operator-facing release and CI topology is documented in <code>release-operations.adoc</code> in <strong>ike-infrastructure</strong>.</p>
+  </div>
+ </div>
+</div>
+<div>
+ <h2 id="source-repositories"><a href="#source-repositories"></a><a id="source-repositories"></a>Source repositories</h2>
+ <table class="bodyTable table table-striped table-hover" style="background: #FFFFFF">
+  <thead>
+   <tr class="a">
+    <th>Repository</th>
+    <th>What it contributes</th>
+   </tr>
+  </thead>
+  <tbody>
+   <tr class="b">
+    <td style="text-align: left;"><a href="https://github.com/IKE-Network/ike-platform" class="externalLink">ike-platform</a><sup class="visible-print-inline">[1]</sup></td>
+    <td>The <code>ws:checkpoint-draft</code> / <code>ws:checkpoint-publish</code> goals (Stage 1).</td>
+   </tr>
+   <tr class="a">
+    <td style="text-align: left;"><a href="https://github.com/IKE-Network/ike-tooling" class="externalLink">ike-tooling</a><sup class="visible-print-inline">[2]</sup></td>
+    <td>The <code>ike:*</code> installer, signing, notarization, and changelog goals (Stages 2–3).</td>
+   </tr>
+   <tr class="b">
+    <td style="text-align: left;"><a href="https://github.com/IKE-Network/ike-komet-wsr" class="externalLink">ike-komet-wsr</a><sup class="visible-print-inline">[3]</sup></td>
+    <td>The Komet workspace and `komet-desktop’s JReleaser/installer config (Stage 2).</td>
+   </tr>
+   <tr class="a">
+    <td style="text-align: left;"><a href="https://github.com/IKE-Network/ike-ci" class="externalLink">ike-ci</a><sup class="visible-print-inline">[4]</sup></td>
+    <td>The TeamCity configuration and <code>notify-zulip.sh</code> (Stages 2–3).</td>
+   </tr>
+  </tbody>
+ </table>
+</div>
 
 							<div class="document-footer">
 <div class="keywords">
@@ -319,9 +427,13 @@
 <div class="footnotes visible-print-block">
 								Links:
 								<ul class="list-unstyled">
-								<li>[1] https://ike.network</li>
+								<li>[1] https://github.com/IKE-Network/ike-platform</li>
+								<li>[2] https://github.com/IKE-Network/ike-tooling</li>
+								<li>[3] https://github.com/IKE-Network/ike-komet-wsr</li>
+								<li>[4] https://github.com/IKE-Network/ike-ci</li>
 								</ul>
 							</div>
+<div class="date">Date: <strong>2026-06-29 10:13:32 -0700</strong></div>
 						</div>
 						</div>
 					</div>
