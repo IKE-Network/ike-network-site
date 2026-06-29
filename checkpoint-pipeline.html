@@ -256,7 +256,7 @@
  <p>The goal ships as a <strong>draft / publish pair</strong> — the same convention used throughout the <code>ws</code> plugin — so you can preview before you mutate:</p>
  <dl>
   <dt>
-   <a href="https://ike.network/ike-platform/latest/ike-workspace-maven-plugin/ws-goals.html#checkpoint-draft"><code>ws:checkpoint-draft</code></a>
+   <a href="https://ike.network/ike-platform/latest/ike-workspace-maven-plugin/ws-goals.html#checkpoint-publish"><code>ws:checkpoint-draft</code></a>
   </dt>
   <dd>Read-only preview. Runs the preflight checks and prints the tag it would create and the SHAs it would capture, writing nothing.</dd>
   <dt>
@@ -362,13 +362,13 @@ mvn ws:checkpoint-publish</code></pre>
   <li>posts terse progress as the chain advances, then a rich summary — a generated "what changed" changelog plus links to the release — on the final build;</li>
   <li>is <strong>best-effort</strong>: a notification failure is logged but never fails the release.</li>
  </ul>
- <p>The changelog body comes from the <code>ike</code> plugin’s release-notes machinery (<a href="https://ike.network/ike-tooling/latest/ike-maven-plugin/index.html#release-changelog"><code>ike:release-changelog</code></a> / <code>ReleaseNotesSupport</code>), which derives entries from commit trailers and the GitHub milestone, so the human-readable "what changed" is generated, not hand-written.</p>
+ <p>The changelog body comes from the <code>ike</code> plugin’s release-notes machinery (<a href="https://ike.network/ike-tooling/latest/ike-maven-plugin/index.html#release-goals"><code>ike:release-changelog</code></a> / <code>ReleaseNotesSupport</code>), which derives entries from commit trailers and the GitHub milestone, so the human-readable "what changed" is generated, not hand-written.</p>
  <div>
   <div style="color: #7a2518; margin-bottom: .25em">Where the machinery lives</div>
   <div style="background: #fffef7; border-color: #e0e0dc; border: 1px solid #e6e6e6; box-shadow: 0 1px 4px #e0e0dc; margin-bottom: 1.25em; padding: 1.25em">
    <ul>
     <li><code>notify-zulip.sh</code> — the notifier, embedded as the final build step of each release/publish configuration in <strong>ike-ci</strong> (<code>.teamcity/</code>).</li>
-    <li><code>IkeReleaseChangelogMojo</code> (<a href="https://ike.network/ike-tooling/latest/ike-maven-plugin/index.html#release-changelog"><code>ike:release-changelog</code></a>) and <code>ReleaseNotesSupport</code> in <strong>ike-tooling</strong> — generate the changelog the notification and the GitHub release share.</li>
+    <li><code>IkeReleaseChangelogMojo</code> (<a href="https://ike.network/ike-tooling/latest/ike-maven-plugin/index.html#release-goals"><code>ike:release-changelog</code></a>) and <code>ReleaseNotesSupport</code> in <strong>ike-tooling</strong> — generate the changelog the notification and the GitHub release share.</li>
    </ul>
    <p>Stream, bot identity, and API key are TeamCity project parameters sourced from 1Password; no secret is committed. The operator-facing release and CI topology is documented in <code>release-operations.adoc</code> in <strong>ike-infrastructure</strong>.</p>
   </div>
@@ -386,7 +386,7 @@ mvn ws:checkpoint-publish</code></pre>
   <tbody>
    <tr class="b">
     <td style="text-align: left;"><a href="https://github.com/IKE-Network/ike-platform" class="externalLink">ike-platform</a><sup class="visible-print-inline">[1]</sup></td>
-    <td>The <a href="https://ike.network/ike-platform/latest/ike-workspace-maven-plugin/ws-goals.html#checkpoint-draft"><code>ws:checkpoint-draft</code></a> / <a href="https://ike.network/ike-platform/latest/ike-workspace-maven-plugin/ws-goals.html#checkpoint-publish"><code>ws:checkpoint-publish</code></a> goals (Stage 1).</td>
+    <td>The <a href="https://ike.network/ike-platform/latest/ike-workspace-maven-plugin/ws-goals.html#checkpoint-publish"><code>ws:checkpoint-draft</code></a> / <a href="https://ike.network/ike-platform/latest/ike-workspace-maven-plugin/ws-goals.html#checkpoint-publish"><code>ws:checkpoint-publish</code></a> goals (Stage 1).</td>
    </tr>
    <tr class="a">
     <td style="text-align: left;"><a href="https://github.com/IKE-Network/ike-tooling" class="externalLink">ike-tooling</a><sup class="visible-print-inline">[2]</sup></td>
