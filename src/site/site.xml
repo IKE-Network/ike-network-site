@@ -63,6 +63,7 @@
         <menu name="IKE Network">
             <item name="Home" href="index.html"/>
             <item name="Powered by IKE" href="brand.html"/>
+            <item name="Checkpoint Pipeline" href="https://ike.network/ike-network-site/checkpoint-pipeline.html"/>
         </menu>
 
         <!-- Foundation members, in dependency-direction order
