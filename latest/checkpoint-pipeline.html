@@ -216,12 +216,12 @@
 											</ul>
 						</div>
 <h1 id="the-komet-checkpoint-pipeline">The Komet Checkpoint Pipeline</h1>
-<p>A <strong>checkpoint</strong> turns the entire Komet workspace — a dozen independently versioned repositories — into one reproducible, tagged snapshot, and a continuous-integration chain turns that snapshot into signed installers and a chat announcement. One command, <a href="https://ike.network/ike-platform/latest/ike-workspace-maven-plugin/ws-goals.html#checkpoint-publish"><code>ws:checkpoint-publish</code></a>, starts it; everything after the git tag is automated.</p>
+<p>A <strong>checkpoint</strong> turns the entire Komet workspace — a dozen independently versioned repositories — into one reproducible, tagged snapshot, and a continuous-integration chain turns that snapshot into signed installers and a chat announcement. One command, <code>ws:checkpoint-publish</code>, starts it; everything after the git tag is automated.</p>
 <p>This page explains the machinery end to end: the goal that cuts the checkpoint, the build that produces the <code>.pkg</code> and <code>.msi</code> installers, and the step that posts the result to Zulip. It is written for two readers — an <strong>operator</strong> who needs to cut a checkpoint, and an <strong>engineer</strong> who needs to understand or change how the pipeline works. Each stage closes with a <strong>Where the machinery lives</strong> note pointing into the source.</p>
 <div>
  <h2 id="the-three-stages"><a href="#the-three-stages"></a><a id="the-three-stages"></a>The three stages</h2>
  <div>
-  <img src="https://kroki.komet.sh/graphviz/svg/eNqdk99P2zAQx9_5K05B2gv9QdKJlrWptEaFoT0OadJoNTnJNXGT2JbtDMrE_75ziluNsQfIg6379b27j5ycF5qpEq7h9wmAZqLKuY5vF1Oy0iKTtdRxYMlvFNMobOACQuZoUMXng9G0q9kbH30M7kzJFMapfABjdzXGgZatyDHvbXhdYx6Au5_VTzfdF4C3k8tJskwoRworWEPVN8Ki3jsMf8Q4DKFhuuCCuoYTuOe5LeNoMF67CTAvaAIvNmYXG3YeUIRCpk3362Z1a0jyZ9babnF4MWcwfTnNtMsqQ7irWYp1PJul82-WUasQPpyGEyKRtHY2TOfz3l_bXY2Wl1eLoNdN750XSbRcjIP1XjVT4GWDe_MpKzGrlOTC9lWb1tyUPpH6HRKPWcOZozRfiYLbLkUKwF-odytBCystt5hZOANWFBoLZqX2erROf-7a00mFzvn0Kqe05XX-NlIR_Isq8qgWTu-dsPgR1i2yJuF2BzcVfpUN2u9mJbgwltEr09BNbXyh8_tCwwuBOQxUVcAQBo3hK7FVLKvclGewrbmo6BbSMk0P7sAr6nhxdzq5_wNjQhCfDN_GbASvQBt5aJ-fNd_HTWN9BHfN7Zc2BaWxT35k5rDiY1tz5dN-OAP8Lo37_9eHUYmB06SrqzmwcC_QecvIuRymzhpNT57-AEQaXMI=" alt="The Komet checkpoint pipeline">
+  <img src="images/checkpoint-pipeline.svg" alt="The Komet checkpoint pipeline">
  </div>
  <table class="bodyTable table table-striped table-hover" style="background: #FFFFFF">
   <thead>
@@ -234,7 +234,7 @@
   <tbody>
    <tr class="b">
     <td style="text-align: left;"><strong>1 · Cut</strong></td>
-    <td><a href="https://ike.network/ike-platform/latest/ike-workspace-maven-plugin/ws-goals.html#checkpoint-publish"><code>ws:checkpoint-publish</code></a> aligns versions, verifies the reactor builds, tags every subproject and the workspace aggregator at their current <code>HEAD</code>, writes a checkpoint manifest, and pushes.</td>
+    <td><code>ws:checkpoint-publish</code> aligns versions, verifies the reactor builds, tags every subproject and the workspace aggregator at their current <code>HEAD</code>, writes a checkpoint manifest, and pushes.</td>
     <td>Operator’s machine, via the <code>ws</code> plugin (<code>ike-platform</code>).</td>
    </tr>
    <tr class="a">
@@ -256,17 +256,17 @@
  <p>The goal ships as a <strong>draft / publish pair</strong> — the same convention used throughout the <code>ws</code> plugin — so you can preview before you mutate:</p>
  <dl>
   <dt>
-   <a href="https://ike.network/ike-platform/latest/ike-workspace-maven-plugin/ws-goals.html#checkpoint-publish"><code>ws:checkpoint-draft</code></a>
+   <code>ws:checkpoint-draft</code>
   </dt>
   <dd>Read-only preview. Runs the preflight checks and prints the tag it would create and the SHAs it would capture, writing nothing.</dd>
   <dt>
-   <a href="https://ike.network/ike-platform/latest/ike-workspace-maven-plugin/ws-goals.html#checkpoint-publish"><code>ws:checkpoint-publish</code></a>
+   <code>ws:checkpoint-publish</code>
   </dt>
   <dd>
    The mutation. It extends the draft behavior with four safeguards, in order:
    <ol style="list-style-type: decimal;">
     <li><strong>Require a clean working set</strong> — every subproject tree must match its committed <code>HEAD</code>, so the tag is reproducible.</li>
-    <li><strong>Auto-align</strong> — runs <a href="https://ike.network/ike-platform/latest/ike-workspace-maven-plugin/ws-goals.html#align-publish"><code>ws:align-publish</code></a> to apply inter-subproject version alignment, committing any changes as a <code>workspace: pre-checkpoint alignment</code> commit.</li>
+    <li><strong>Auto-align</strong> — runs <code>ws:align-publish</code> to apply inter-subproject version alignment, committing any changes as a <code>workspace: pre-checkpoint alignment</code> commit.</li>
     <li><strong>Verify the reactor</strong> — runs <code>clean verify -DskipTests</code> across the whole reactor and refuses to cut a checkpoint that does not build. (Skippable with <code>-Dws.checkpoint.skipVerify=true</code> when you have already built.)</li>
     <li><strong>Tag and push</strong> — in topological order, tags each subproject <code>checkpoint/&lt;name&gt;</code>, writes the manifest to <code>checkpoints/checkpoint-&lt;name&gt;.yaml</code>, updates <code>workspace.yaml</code> with the captured SHAs, tags the aggregator, and pushes tags and branch to <code>origin</code>.</li>
    </ol>
@@ -320,19 +320,19 @@ mvn ws:checkpoint-publish</code></pre>
   </thead>
   <tbody>
    <tr class="b">
-    <td style="text-align: left;"><a href="https://ike.network/ike-tooling/latest/ike-maven-plugin/index.html#jpackage-props"><code>ike:jpackage-props</code></a></td>
+    <td style="text-align: left;"><code>ike:jpackage-props</code></td>
     <td>Computes the ~19 derived properties JReleaser needs — build timestamp, platform triple, and the date-based app version (with the Windows minor ≤ 255 constraint handled separately).</td>
    </tr>
    <tr class="a">
-    <td style="text-align: left;"><a href="https://ike.network/ike-tooling/latest/ike-maven-plugin/index.html#codesign-natives"><code>ike:codesign-natives</code></a></td>
+    <td style="text-align: left;"><code>ike:codesign-natives</code></td>
     <td>Signs every native library (<code>.dylib</code>/<code>.jnilib</code>), including those nested inside JARs (JNA, RocksDB), with the hardened-runtime entitlements Apple Silicon requires — without them the JVM crashes on launch.</td>
    </tr>
    <tr class="b">
-    <td style="text-align: left;"><a href="https://ike.network/ike-tooling/latest/ike-maven-plugin/index.html#codesign-pkg"><code>ike:codesign-pkg</code></a></td>
+    <td style="text-align: left;"><code>ike:codesign-pkg</code></td>
     <td>Re-signs the <code>.app</code> bundle inside the <code>.pkg</code> with entitlements (a workaround for older JDKs; auto-skips on JDK 25.0.2+ where <code>jpackage</code> signs correctly).</td>
    </tr>
    <tr class="a">
-    <td style="text-align: left;"><a href="https://ike.network/ike-tooling/latest/ike-maven-plugin/index.html#notarize"><code>ike:notarize</code></a></td>
+    <td style="text-align: left;"><code>ike:notarize</code></td>
     <td>Submits the package to Apple’s notary service, waits for acceptance, staples the ticket, and verifies it with <code>spctl</code>.</td>
    </tr>
   </tbody>
@@ -362,13 +362,13 @@ mvn ws:checkpoint-publish</code></pre>
   <li>posts terse progress as the chain advances, then a rich summary — a generated "what changed" changelog plus links to the release — on the final build;</li>
   <li>is <strong>best-effort</strong>: a notification failure is logged but never fails the release.</li>
  </ul>
- <p>The changelog body comes from the <code>ike</code> plugin’s release-notes machinery (<a href="https://ike.network/ike-tooling/latest/ike-maven-plugin/index.html#release-goals"><code>ike:release-changelog</code></a> / <code>ReleaseNotesSupport</code>), which derives entries from commit trailers and the GitHub milestone, so the human-readable "what changed" is generated, not hand-written.</p>
+ <p>The changelog body comes from the <code>ike</code> plugin’s release-notes machinery (<code>ike:release-changelog</code> / <code>ReleaseNotesSupport</code>), which derives entries from commit trailers and the GitHub milestone, so the human-readable "what changed" is generated, not hand-written.</p>
  <div>
   <div style="color: #7a2518; margin-bottom: .25em">Where the machinery lives</div>
   <div style="background: #fffef7; border-color: #e0e0dc; border: 1px solid #e6e6e6; box-shadow: 0 1px 4px #e0e0dc; margin-bottom: 1.25em; padding: 1.25em">
    <ul>
     <li><code>notify-zulip.sh</code> — the notifier, embedded as the final build step of each release/publish configuration in <strong>ike-ci</strong> (<code>.teamcity/</code>).</li>
-    <li><code>IkeReleaseChangelogMojo</code> (<a href="https://ike.network/ike-tooling/latest/ike-maven-plugin/index.html#release-goals"><code>ike:release-changelog</code></a>) and <code>ReleaseNotesSupport</code> in <strong>ike-tooling</strong> — generate the changelog the notification and the GitHub release share.</li>
+    <li><code>IkeReleaseChangelogMojo</code> (<code>ike:release-changelog</code>) and <code>ReleaseNotesSupport</code> in <strong>ike-tooling</strong> — generate the changelog the notification and the GitHub release share.</li>
    </ul>
    <p>Stream, bot identity, and API key are TeamCity project parameters sourced from 1Password; no secret is committed. The operator-facing release and CI topology is documented in <code>release-operations.adoc</code> in <strong>ike-infrastructure</strong>.</p>
   </div>
@@ -386,7 +386,7 @@ mvn ws:checkpoint-publish</code></pre>
   <tbody>
    <tr class="b">
     <td style="text-align: left;"><a href="https://github.com/IKE-Network/ike-platform" class="externalLink">ike-platform</a><sup class="visible-print-inline">[1]</sup></td>
-    <td>The <a href="https://ike.network/ike-platform/latest/ike-workspace-maven-plugin/ws-goals.html#checkpoint-publish"><code>ws:checkpoint-draft</code></a> / <a href="https://ike.network/ike-platform/latest/ike-workspace-maven-plugin/ws-goals.html#checkpoint-publish"><code>ws:checkpoint-publish</code></a> goals (Stage 1).</td>
+    <td>The <code>ws:checkpoint-draft</code> / <code>ws:checkpoint-publish</code> goals (Stage 1).</td>
    </tr>
    <tr class="a">
     <td style="text-align: left;"><a href="https://github.com/IKE-Network/ike-tooling" class="externalLink">ike-tooling</a><sup class="visible-print-inline">[2]</sup></td>
@@ -433,7 +433,7 @@ mvn ws:checkpoint-publish</code></pre>
 								<li>[4] https://github.com/IKE-Network/ike-ci</li>
 								</ul>
 							</div>
-<div class="date">Date: <strong>2026-06-29 14:02:03 -0700</strong></div>
+<div class="date">Date: <strong>2026-06-30 18:28:23 -0700</strong></div>
 						</div>
 						</div>
 					</div>

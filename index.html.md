@@ -14,7 +14,7 @@ The IKE foundation — published to Maven Central and inheritable by any project
 
 The foundation members fall into two layered orderings. `ike-base-parent` sits at the apex of the **parent** inheritance chain — every other foundation artifact inherits from it. `ike-platform` sits at the terminus of the **build-and-release** dependency chain — releases propagate through it last.
 
-![Build/release dependency order](https://kroki.komet.sh/graphviz/svg/eNqFUstu2zAQvPsrCPXSIBZgx1BaI1APPfUDenOCYCWuZMYUSZCUErfIv2dXVGypl-okzr5mdlaq1oM7isb2RkJU1oi_KyE8mJNUvvz984FeVVtbbX0ZCQ4OPJrIcG07x2WE98iAsRLFIRzBYVnZt7UI8ayxzDxnoVw3SmuU2ZqmmWigo9Av1ANGVcOEBvUHy-2WHpSbpmZf8HtT4J4yPoE7_CZ3d9kTD0XZ0tD_dNxfa4vx41pWBgGFOGioUJeZOmHOSJ40Ppqv6UdYo8832ZJU0zQ73MxI4X2x3WwSqZfQu2XfFxggJ9RZz40H0D2KeHYYblJJtFYvSxhRpk3h14BvcRF-tf5EbtSYUwRNIO9SqrR1WHZiJMWchriMMdJY3803kv9ICg7JQAnhSPaJqUqkrcyUUj6Tnb9HvhddBDCHCzt689yrsAtASOirdJS17kNE_zx0OF6lmA5K2hhRPozI5_bvYVvtIUvgRNRjq7gBSkGqcUB_pnwT-g69qHql5aMhIxQdPobRDJl34E8UdcoEcSscOVArDFPf64VuEsDM5sukEewDdTHQYkdbmpnzz_3ssGiK2f1MCsatvq_eVx-IkS0e) Figure 1. Build/release dependency order 
+![Build/release dependency order](images/foundation-dependency.svg) Figure 1. Build/release dependency order 
 
 Members at the same level have no dependency on each other — `ike-tooling` and `ike-workspace-extension` can release in either order or in parallel.
 
@@ -64,7 +64,7 @@ Workspace management, release orchestration, gitflow workflows, and build-time u
 
 Documentation plumbing for the IKE Network. Hosts the ike-doc-maven-plugin (ike-doc packaging, AsciiDoc/render pipeline, PDF dispatch), the Koncept AsciiDoc extension, DocBook XSL + fonts, shared doc resources, and the semantic linebreak reformatter. Split from ike-pipeline to resolve the extensions=true reactor-load cycle. See IKE-Network/ike-issues#216.
 
-| Version | 74 |
+| Version | 88 |
 | --- | --- |
 | Site | [ike.network/ike-docs](https://ike.network/ike-docs/)[11] |
 | GitHub | [IKE-Network/ike-docs](https://github.com/IKE-Network/ike-docs)[12] |
@@ -74,6 +74,7 @@ Documentation plumbing for the IKE Network. Hosts the ike-doc-maven-plugin (ike-
 - ike-doc-resources
 - minimal-fonts
 - docbook-xsl
+- koncept-core
 - koncept-asciidoc-extension
 - ike-doc-maven-plugin
 - semantic-linebreak

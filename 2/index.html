@@ -297,7 +297,7 @@
  <p>The IKE foundation — published to Maven Central and inheritable by any project.</p>
  <p>The foundation members fall into two layered orderings. <code>ike-base-parent</code> sits at the apex of the <strong>parent</strong> inheritance chain — every other foundation artifact inherits from it. <code>ike-platform</code> sits at the terminus of the <strong>build-and-release</strong> dependency chain — releases propagate through it last.</p>
  <div>
-  <img src="https://kroki.komet.sh/graphviz/svg/eNqFUstu2zAQvPsrCPXSIBZgx1BaI1APPfUDenOCYCWuZMYUSZCUErfIv2dXVGypl-okzr5mdlaq1oM7isb2RkJU1oi_KyE8mJNUvvz984FeVVtbbX0ZCQ4OPJrIcG07x2WE98iAsRLFIRzBYVnZt7UI8ayxzDxnoVw3SmuU2ZqmmWigo9Av1ANGVcOEBvUHy-2WHpSbpmZf8HtT4J4yPoE7_CZ3d9kTD0XZ0tD_dNxfa4vx41pWBgGFOGioUJeZOmHOSJ40Ppqv6UdYo8832ZJU0zQ73MxI4X2x3WwSqZfQu2XfFxggJ9RZz40H0D2KeHYYblJJtFYvSxhRpk3h14BvcRF-tf5EbtSYUwRNIO9SqrR1WHZiJMWchriMMdJY3803kv9ICg7JQAnhSPaJqUqkrcyUUj6Tnb9HvhddBDCHCzt689yrsAtASOirdJS17kNE_zx0OF6lmA5K2hhRPozI5_bvYVvtIUvgRNRjq7gBSkGqcUB_pnwT-g69qHql5aMhIxQdPobRDJl34E8UdcoEcSscOVArDFPf64VuEsDM5sukEewDdTHQYkdbmpnzz_3ssGiK2f1MCsatvq_eVx-IkS0e" alt="Build/release dependency order">
+  <img src="images/foundation-dependency.svg" alt="Build/release dependency order">
   <div style="color: #7a2518; margin-bottom: .25em">Figure 1. Build/release dependency order</div>
  </div>
  <p>Members at the same level have no dependency on each other — <code>ike-tooling</code> and <code>ike-workspace-extension</code> can release in either order or in parallel.</p>
@@ -382,7 +382,7 @@
   <tbody>
    <tr class="a">
     <td style="text-align: left;">Version</td>
-    <td>74</td>
+    <td>88</td>
    </tr>
    <tr class="b">
     <td style="text-align: left;">Site</td>
@@ -400,6 +400,7 @@
    <li>ike-doc-resources</li>
    <li>minimal-fonts</li>
    <li>docbook-xsl</li>
+   <li>koncept-core</li>
    <li>koncept-asciidoc-extension</li>
    <li>ike-doc-maven-plugin</li>
    <li>semantic-linebreak</li>
@@ -679,7 +680,7 @@
 								<li>[33] https://github.com/IKE-Network/workspace-reactor-example</li>
 								</ul>
 							</div>
-<div class="date">Date: <strong>2026-06-29 13:27:25 -0700</strong></div>
+<div class="date">Date: <strong>2026-06-30 18:28:25 -0700</strong></div>
 						</div>
 						</div>
 					</div>
