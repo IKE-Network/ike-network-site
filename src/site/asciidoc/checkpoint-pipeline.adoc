@@ -16,7 +16,7 @@ to understand or change how the pipeline works. Each stage closes with a
 
 == The three stages
 
-image::https://kroki.komet.sh/graphviz/svg/eNqdk99P2zAQx9_5K05B2gv9QdKJlrWptEaFoT0OadJoNTnJNXGT2JbtDMrE_75ziluNsQfIg6379b27j5ycF5qpEq7h9wmAZqLKuY5vF1Oy0iKTtdRxYMlvFNMobOACQuZoUMXng9G0q9kbH30M7kzJFMapfABjdzXGgZatyDHvbXhdYx6Au5_VTzfdF4C3k8tJskwoRworWEPVN8Ki3jsMf8Q4DKFhuuCCuoYTuOe5LeNoMF67CTAvaAIvNmYXG3YeUIRCpk3362Z1a0jyZ9babnF4MWcwfTnNtMsqQ7irWYp1PJul82-WUasQPpyGEyKRtHY2TOfz3l_bXY2Wl1eLoNdN750XSbRcjIP1XjVT4GWDe_MpKzGrlOTC9lWb1tyUPpH6HRKPWcOZozRfiYLbLkUKwF-odytBCystt5hZOANWFBoLZqX2erROf-7a00mFzvn0Kqe05XX-NlIR_Isq8qgWTu-dsPgR1i2yJuF2BzcVfpUN2u9mJbgwltEr09BNbXyh8_tCwwuBOQxUVcAQBo3hK7FVLKvclGewrbmo6BbSMk0P7sAr6nhxdzq5_wNjQhCfDN_GbASvQBt5aJ-fNd_HTWN9BHfN7Zc2BaWxT35k5rDiY1tz5dN-OAP8Lo37_9eHUYmB06SrqzmwcC_QecvIuRymzhpNT57-AEQaXMI=[The Komet checkpoint pipeline,role="text-center"]
+image::images/checkpoint-pipeline.svg[The Komet checkpoint pipeline,role="text-center"]
 
 [cols="1,3,2",options="header"]
 |===

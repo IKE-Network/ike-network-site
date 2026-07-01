@@ -1,0 +1,29 @@
+digraph foundation {
+  rankdir=TB;
+  bgcolor=transparent;
+  compound=true;
+  node [shape=box, style="rounded,filled", fontname="Helvetica", fontsize=11, fillcolor="#e8f5e9", color="#2e7d32"];
+  edge [fontname="Helvetica", fontsize=9, color="#555555"];
+
+  base  [label="ike-base-parent\n(parent only)", fillcolor="#fff3e0", color="#e65100"];
+  jsup  [label="ike-java-support\n(value types)"];
+  tool  [label="ike-tooling"];
+  wsext [label="ike-workspace-extension"];
+  docs  [label="ike-docs"];
+  plat  [label="ike-platform"];
+
+  base -> jsup [style=dashed, label=" parent"];
+  jsup -> tool;
+  jsup -> wsext;
+  tool -> docs;
+  docs -> plat;
+  wsext -> plat;
+
+  subgraph cluster_vme {
+    style=dotted;
+    color="#6a1b9a";
+    label="registered at every consumer build\nvalidates typed-marker pins + policies";
+    fontsize=10;
+    vme [label="ike-version-management-extension", fillcolor="#f3e5f5", color="#6a1b9a"];
+  }
+}

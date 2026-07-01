@@ -1,0 +1,34 @@
+digraph G {
+  rankdir=TB;
+  bgcolor="transparent";
+  nodesep=0.3; ranksep=0.4;
+  node [shape=box style="rounded,filled" fillcolor="#ffffff" color="#C98CEC" fontname="Inter" fontsize=11 margin=0.18 width=2.7];
+  edge [color="#7a6fa0"];
+
+  subgraph cluster_cut {
+    style="rounded"; color="#C98CEC";
+    h1 [label=<<b>Stage 1 &#183; Cut</b>>, fillcolor="#F3E9FB", fontcolor="#6C2EB7"];
+    cp  [label="ws:checkpoint-publish"];
+    tag [label="checkpoint/<name>\ngit tag on every\nsubproject + aggregator"];
+    h1 -> cp -> tag;
+  }
+
+  subgraph cluster_build {
+    style="rounded"; color="#C98CEC";
+    h2  [label=<<b>Stage 2 &#183; Build</b>>, fillcolor="#F3E9FB", fontcolor="#6C2EB7"];
+    ci  [label="TeamCity IkeKometWs\ninstaller builds"];
+    inst[label="signed .pkg / .msi\njpackage + jlink + notarize"];
+    h2 -> ci -> inst;
+  }
+
+  subgraph cluster_announce {
+    style="rounded"; color="#C98CEC";
+    h3   [label=<<b>Stage 3 &#183; Announce</b>>, fillcolor="#F3E9FB", fontcolor="#6C2EB7"];
+    rel  [label="GitHub pre-release"];
+    zulip[label="Zulip announcement"];
+    h3 -> rel -> zulip;
+  }
+
+  tag  -> h2;
+  inst -> h3;
+}
