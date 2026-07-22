@@ -52,6 +52,8 @@ include::../../../projects/hl7-ig-corpus-example.adoc[leveloffset=+1]
 
 include::../../../projects/ike-network-site.adoc[leveloffset=+1]
 
+include::../../../projects/ike-starter-set.adoc[leveloffset=+1]
+
 include::../../../projects/integration-tests-example.adoc[leveloffset=+1]
 
 include::../../../projects/project-example.adoc[leveloffset=+1]
