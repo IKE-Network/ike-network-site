@@ -2,10 +2,10 @@
 // Managed by ike:site-publish — do not edit manually.
 //
 // project-id: ike-platform
-// project-version: 147
+// project-version: 148
 // project-url: https://ike.network/ike-platform/
 // github-url: https://github.com/IKE-Network/ike-platform
-// registered: 2026-08-07T19:37:28.922680Z
+// registered: 2026-08-07T20:01:51.371479Z
 
 = IKE Platform
 
@@ -21,7 +21,7 @@ Consumer-facing parent POM, BOM, and workspace management plugin
 
 [cols="1,2",options="autowidth"]
 |===
-| Version | 147
+| Version | 148
 | Site | https://ike.network/ike-platform/[ike.network/ike-platform]
 | GitHub | https://github.com/IKE-Network/ike-platform[IKE-Network/ike-platform]
 |===
