@@ -2,10 +2,10 @@
 // Managed by ike:site-publish — do not edit manually.
 //
 // project-id: ike-tooling
-// project-version: 217
+// project-version: 241
 // project-url: https://ike.network/ike-tooling/
 // github-url: https://github.com/IKE-Network/ike-tooling
-// registered: 2026-05-26T21:13:12.626410Z
+// registered: 2026-08-07T14:56:10.085248Z
 
 = IKE Tooling
 
@@ -16,7 +16,7 @@ Workspace management, release orchestration, gitflow workflows,
 
 [cols="1,2",options="autowidth"]
 |===
-| Version | 217
+| Version | 241
 | Site | https://ike.network/ike-tooling/[ike.network/ike-tooling]
 | GitHub | https://github.com/IKE-Network/ike-tooling[IKE-Network/ike-tooling]
 |===
@@ -24,6 +24,7 @@ Workspace management, release orchestration, gitflow workflows,
 === Modules
 
 * ike-build-standards
+* ike-knowledge-spi
 * ike-workspace-model
 * ike-maven-plugin-support
 * ike-maven-plugin
