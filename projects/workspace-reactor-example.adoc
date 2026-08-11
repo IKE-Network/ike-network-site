@@ -2,16 +2,16 @@
 // Managed by ike:site-publish — do not edit manually.
 //
 // project-id: workspace-reactor-example
-// project-version: 24
+// project-version: 25
 // project-url: https://ike.network/workspace-reactor-example/
 // github-url: https://github.com/IKE-Network/workspace-reactor-example
-// registered: 2026-05-28T20:01:00.289641Z
+// registered: 2026-08-11T14:34:21.428477Z
 
 = IKE Workspace Reactor Example
 
 [cols="1,2",options="autowidth"]
 |===
-| Version | 24
+| Version | 25
 | Site | https://ike.network/workspace-reactor-example/[ike.network/workspace-reactor-example]
 | GitHub | https://github.com/IKE-Network/workspace-reactor-example[IKE-Network/workspace-reactor-example]
 |===
