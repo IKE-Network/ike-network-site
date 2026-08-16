@@ -2,10 +2,10 @@
 // Managed by ike:site-publish — do not edit manually.
 //
 // project-id: ike-version-management-extension
-// project-version: 10
+// project-version: 11
 // project-url: https://ike.network/ike-version-management-extension/
 // github-url: https://github.com/IKE-Network/ike-version-management-extension
-// registered: 2026-05-27T00:39:06.375422Z
+// registered: 2026-08-16T02:11:05.947497Z
 
 = IKE Version Management Extension
 
@@ -23,7 +23,7 @@ Maven 4 build extension that implements the IKE typed-marker
 
 [cols="1,2",options="autowidth"]
 |===
-| Version | 10
+| Version | 11
 | Site | https://ike.network/ike-version-management-extension/[ike.network/ike-version-management-extension]
 | GitHub | https://github.com/IKE-Network/ike-version-management-extension[IKE-Network/ike-version-management-extension]
 |===
