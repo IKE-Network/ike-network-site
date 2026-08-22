@@ -1,0 +1,34 @@
+digraph G {
+  rankdir=TB;
+  bgcolor="transparent";
+  nodesep=0.3; ranksep=0.4;
+  node [shape=box style="rounded,filled" fillcolor="#ffffff" color="#C98CEC" fontname="Inter" fontsize=11 margin=0.18 width=2.7];
+  edge [color="#7a6fa0"];
+
+  subgraph cluster_cut {
+    style="rounded"; color="#C98CEC";
+    h1 [label=<<b>Stage 1 &#183; Draft &amp; Cut</b>>, fillcolor="#F3E9FB", fontcolor="#6C2EB7"];
+    draft [label="ike:release-draft\npreview: plan + gates,\nwrites nothing"];
+    pub [label="ike:release-publish\ngates, verify at the tag,\ntag v<N>, merge, bump"];
+    h1 -> draft -> pub;
+  }
+
+  subgraph cluster_deploy {
+    style="rounded"; color="#C98CEC";
+    h2 [label=<<b>Stage 2 &#183; Deploy</b>>, fillcolor="#F3E9FB", fontcolor="#6C2EB7"];
+    nexus [label="Nexus deploy from tag\n(+ Maven Central via\nJReleaser for foundation)"];
+    gh [label="push tag + main\nGitHub Release + notes\ngh-pages sites"];
+    h2 -> nexus -> gh;
+  }
+
+  subgraph cluster_cascade {
+    style="rounded"; color="#C98CEC";
+    h3 [label=<<b>Stage 3 &#183; Cascade</b>>, fillcolor="#F3E9FB", fontcolor="#6C2EB7"];
+    tc [label="TeamCity IkeFoundation\nfinish-build triggers"];
+    repin [label="downstream repos release\nin dependency order;\nconsumers repin"];
+    h3 -> tc -> repin;
+  }
+
+  pub -> h2;
+  gh  -> h3;
+}
