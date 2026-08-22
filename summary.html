@@ -140,6 +140,7 @@
 <ul class="nav nav-pills nav-stacked animate">
 <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
 <li><a href="brand.html"><i class="fas fa-file-alt"></i> Powered by IKE</a></li>
+<li><a href="release-pipeline.html"><i class="fas fa-file-alt"></i> Release Pipeline</a></li>
 <li><a href="checkpoint-pipeline.html"><i class="fas fa-file-alt"></i> Checkpoint Pipeline</a></li>
 </ul>
 		<h5 class="text-uppercase">Foundation</h5>
@@ -152,6 +153,7 @@
 <li><a href="ike-workspace-extension/"><i class="fas fa-file-alt"></i> IKE Workspace Extension</a></li>
 <li><a href="ike-version-management-extension/"><i class="fas fa-file-alt"></i> IKE Version Management Extension</a></li>
 <li><a href="ike-platform/"><i class="fas fa-file-alt"></i> IKE Platform</a></li>
+<li><a href="ike-starter-set/"><i class="fas fa-file-alt"></i> IKE Starter Set</a></li>
 </ul>
 		<h5 class="text-uppercase">Examples</h5>
 
@@ -173,6 +175,7 @@
 <li><a href="https://github.com/IKE-Network/ike-workspace-extension"><i class="fas fa-file-alt"></i> ike-workspace-extension</a></li>
 <li><a href="https://github.com/IKE-Network/ike-version-management-extension"><i class="fas fa-file-alt"></i> ike-version-management-extension</a></li>
 <li><a href="https://github.com/IKE-Network/ike-platform"><i class="fas fa-file-alt"></i> ike-platform</a></li>
+<li><a href="https://github.com/IKE-Network/ike-starter-set"><i class="fas fa-file-alt"></i> ike-starter-set</a></li>
 <li><a href="https://github.com/IKE-Network/doc-example"><i class="fas fa-file-alt"></i> doc-example</a></li>
 <li><a href="https://github.com/IKE-Network/hl7-ig-corpus-example"><i class="fas fa-file-alt"></i> hl7-ig-corpus-example</a></li>
 <li><a href="https://github.com/IKE-Network/ike-network-site"><i class="fas fa-file-alt"></i> ike-network-site</a></li>
@@ -453,6 +456,11 @@ angular.module("sentry.site").constant("SITE_MENU", [
 	parents: [{ title: "IKE Network" }]
 },
 {
+	path: "release-pipeline.html",
+	title: "Release Pipeline",
+	parents: [{ title: "IKE Network" }]
+},
+{
 	path: "checkpoint-pipeline.html",
 	title: "Checkpoint Pipeline",
 	parents: [{ title: "IKE Network" }]
@@ -490,6 +498,11 @@ angular.module("sentry.site").constant("SITE_MENU", [
 {
 	path: "ike-platform/",
 	title: "IKE Platform",
+	parents: [{ title: "Foundation" }]
+},
+{
+	path: "ike-starter-set/",
+	title: "IKE Starter Set",
 	parents: [{ title: "Foundation" }]
 },
 {
@@ -555,6 +568,11 @@ angular.module("sentry.site").constant("SITE_MENU", [
 {
 	path: "https://github.com/IKE-Network/ike-platform",
 	title: "ike-platform",
+	parents: [{ title: "Source" }]
+},
+{
+	path: "https://github.com/IKE-Network/ike-starter-set",
+	title: "ike-starter-set",
 	parents: [{ title: "Source" }]
 },
 {
