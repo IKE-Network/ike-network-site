@@ -1,11 +1,15 @@
-= The Komet Checkpoint Pipeline
+= The IKE Checkpoint Pipeline
 :icons: font
 
-A *checkpoint* turns the entire Komet workspace — a dozen independently
-versioned repositories — into one reproducible, tagged snapshot, and a
+A *checkpoint* turns an entire workspace — many independently versioned
+repositories — into one reproducible, tagged snapshot, and a
 continuous-integration chain turns that snapshot into signed installers
 and a chat announcement. One command, `ws:checkpoint-publish`, starts it;
-everything after the git tag is automated.
+everything after the git tag is automated. The worked example throughout
+this page is the Komet workspace (`ike-komet-wsr`, a dozen
+repositories), whose checkpoint chain is the pipeline's first and
+largest deployment — the `ws:` goals themselves are
+workspace-agnostic.
 
 This page explains the machinery end to end: the goal that cuts the
 checkpoint, the build that produces the `.pkg` and `.msi` installers, and

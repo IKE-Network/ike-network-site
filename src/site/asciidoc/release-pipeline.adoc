@@ -13,7 +13,7 @@ the external deploys, and the CI cascade. It is written for two readers —
 an *operator* who needs to cut a release, and an *engineer* who needs to
 understand or change how the pipeline works. Each stage closes with a
 *Where the machinery lives* note pointing into the source. Its sibling
-page, link:checkpoint-pipeline.html[the Komet Checkpoint Pipeline],
+page, link:checkpoint-pipeline.html[the IKE Checkpoint Pipeline],
 covers the other publication path: workspace-wide snapshots that become
 installers rather than versioned artifacts.
 
