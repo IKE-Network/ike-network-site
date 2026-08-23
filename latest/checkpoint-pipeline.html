@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 
-	<title>The Komet Checkpoint Pipeline &ndash; IKE Network</title>
+	<title>The IKE Checkpoint Pipeline &ndash; IKE Network</title>
 
 	<meta name="keywords" content="IKE,integrated knowledge exchange,sociotechnical fabric,knowledge infrastructure,IKE Network,Maven Central,ike-base-parent,ike-java-support,ike-tooling,ike-docs,ike-workspace-extension,ike-version-management-extension,ike-platform,doc-example,project-example,integration-tests-example,workspace-reactor-example" />
 	<meta name="generator" content="Maven Site Plugin, Doxia Site Renderer 2.0.0, Skin sentry-maven-skin 7.0.00, from asciidoc" />
@@ -22,7 +22,7 @@
 {
 	"@context": "https://schema.org",
 	"@type": "TechArticle",
-	"headline": "The Komet Checkpoint Pipeline",
+	"headline": "The IKE Checkpoint Pipeline",
 	"datePublished": "2026-05-11T00:00:00",
 	"dateModified": "2026-05-11T00:00:00",
 	"mainEntityOfPage": "https://ike.network/checkpoint-pipeline.html",
@@ -218,8 +218,8 @@
 										<li class="list-group-item"><i class="fas fa-level-up-alt fa-flip-horizontal"></i>IKE Network</li>
 											</ul>
 						</div>
-<h1 id="the-komet-checkpoint-pipeline">The Komet Checkpoint Pipeline</h1>
-<p>A <strong>checkpoint</strong> turns the entire Komet workspace — a dozen independently versioned repositories — into one reproducible, tagged snapshot, and a continuous-integration chain turns that snapshot into signed installers and a chat announcement. One command, <a href="https://ike.network/ike-platform/latest/ike-workspace-maven-plugin/ws-goals.html#checkpoint-publish"><code>ws:checkpoint-publish</code></a>, starts it; everything after the git tag is automated.</p>
+<h1 id="the-ike-checkpoint-pipeline">The IKE Checkpoint Pipeline</h1>
+<p>A <strong>checkpoint</strong> turns an entire workspace — many independently versioned repositories — into one reproducible, tagged snapshot, and a continuous-integration chain turns that snapshot into signed installers and a chat announcement. One command, <a href="https://ike.network/ike-platform/latest/ike-workspace-maven-plugin/ws-goals.html#checkpoint-publish"><code>ws:checkpoint-publish</code></a>, starts it; everything after the git tag is automated. The worked example throughout this page is the Komet workspace (<code>ike-komet-wsr</code>, a dozen repositories), whose checkpoint chain is the pipeline’s first and largest deployment — the <code>ws:</code> goals themselves are workspace-agnostic.</p>
 <p>This page explains the machinery end to end: the goal that cuts the checkpoint, the build that produces the <code>.pkg</code> and <code>.msi</code> installers, and the step that posts the result to Zulip. It is written for two readers — an <strong>operator</strong> who needs to cut a checkpoint, and an <strong>engineer</strong> who needs to understand or change how the pipeline works. Each stage closes with a <strong>Where the machinery lives</strong> note pointing into the source.</p>
 <div>
  <h2 id="the-three-stages"><a href="#the-three-stages"></a><a id="the-three-stages"></a>The three stages</h2>
@@ -436,7 +436,7 @@ mvn ws:checkpoint-publish</code></pre>
 								<li>[4] https://github.com/IKE-Network/ike-ci</li>
 								</ul>
 							</div>
-<div class="date">Date: <strong>2026-08-22 21:20:40 -0700</strong></div>
+<div class="date">Date: <strong>2026-08-22 21:52:07 -0700</strong></div>
 						</div>
 						</div>
 					</div>

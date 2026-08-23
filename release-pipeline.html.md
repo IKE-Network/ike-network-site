@@ -8,7 +8,7 @@ canonical_url: https://ike.network/release-pipeline.html
 
 A **release** turns one repository at a `SNAPSHOT` version into an immutable, signed, published artifact set — tagged in git, deployed to Nexus (and, for the foundation, to Maven Central), announced as a GitHub Release with generated notes. One command, `ike:release-publish`, runs it; a TeamCity cascade chains releases across the whole foundation in dependency order with one button.
 
-This page explains the machinery end to end: the gates and the local cut, the external deploys, and the CI cascade. It is written for two readers — an **operator** who needs to cut a release, and an **engineer** who needs to understand or change how the pipeline works. Each stage closes with a **Where the machinery lives** note pointing into the source. Its sibling page, [the Komet Checkpoint Pipeline](checkpoint-pipeline.html)[1], covers the other publication path: workspace-wide snapshots that become installers rather than versioned artifacts.
+This page explains the machinery end to end: the gates and the local cut, the external deploys, and the CI cascade. It is written for two readers — an **operator** who needs to cut a release, and an **engineer** who needs to understand or change how the pipeline works. Each stage closes with a **Where the machinery lives** note pointing into the source. Its sibling page, [the IKE Checkpoint Pipeline](checkpoint-pipeline.html)[1], covers the other publication path: workspace-wide snapshots that become installers rather than versioned artifacts.
 
 ## [#the-three-stages](#the-three-stages)The three stages
 

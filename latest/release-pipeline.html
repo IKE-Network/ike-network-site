@@ -220,7 +220,7 @@
 						</div>
 <h1 id="the-ike-release-pipeline">The IKE Release Pipeline</h1>
 <p>A <strong>release</strong> turns one repository at a <code>SNAPSHOT</code> version into an immutable, signed, published artifact set — tagged in git, deployed to Nexus (and, for the foundation, to Maven Central), announced as a GitHub Release with generated notes. One command, <a href="https://ike.network/ike-tooling/latest/ike-maven-plugin/index.html#release-publish"><code>ike:release-publish</code></a>, runs it; a TeamCity cascade chains releases across the whole foundation in dependency order with one button.</p>
-<p>This page explains the machinery end to end: the gates and the local cut, the external deploys, and the CI cascade. It is written for two readers — an <strong>operator</strong> who needs to cut a release, and an <strong>engineer</strong> who needs to understand or change how the pipeline works. Each stage closes with a <strong>Where the machinery lives</strong> note pointing into the source. Its sibling page, <a href="checkpoint-pipeline.html">the Komet Checkpoint Pipeline</a><sup class="visible-print-inline">[1]</sup>, covers the other publication path: workspace-wide snapshots that become installers rather than versioned artifacts.</p>
+<p>This page explains the machinery end to end: the gates and the local cut, the external deploys, and the CI cascade. It is written for two readers — an <strong>operator</strong> who needs to cut a release, and an <strong>engineer</strong> who needs to understand or change how the pipeline works. Each stage closes with a <strong>Where the machinery lives</strong> note pointing into the source. Its sibling page, <a href="checkpoint-pipeline.html">the IKE Checkpoint Pipeline</a><sup class="visible-print-inline">[1]</sup>, covers the other publication path: workspace-wide snapshots that become installers rather than versioned artifacts.</p>
 <div>
  <h2 id="the-three-stages"><a href="#the-three-stages"></a><a id="the-three-stages"></a>The three stages</h2>
  <div>
@@ -404,7 +404,7 @@ op run --env-file ~/.config/ike/release.env -- ./mvnw ike:release-publish -B</co
 								<li>[7] https://github.com/IKE-Network/ike-platform</li>
 								</ul>
 							</div>
-<div class="date">Date: <strong>2026-08-22 21:20:41 -0700</strong></div>
+<div class="date">Date: <strong>2026-08-22 21:52:08 -0700</strong></div>
 						</div>
 						</div>
 					</div>

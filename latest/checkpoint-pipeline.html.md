@@ -4,9 +4,9 @@ date_modified: 2026-05-10
 canonical_url: https://ike.network/checkpoint-pipeline.html
 ---
 
-# The Komet Checkpoint Pipeline
+# The IKE Checkpoint Pipeline
 
-A **checkpoint** turns the entire Komet workspace — a dozen independently versioned repositories — into one reproducible, tagged snapshot, and a continuous-integration chain turns that snapshot into signed installers and a chat announcement. One command, `ws:checkpoint-publish`, starts it; everything after the git tag is automated.
+A **checkpoint** turns an entire workspace — many independently versioned repositories — into one reproducible, tagged snapshot, and a continuous-integration chain turns that snapshot into signed installers and a chat announcement. One command, `ws:checkpoint-publish`, starts it; everything after the git tag is automated. The worked example throughout this page is the Komet workspace (`ike-komet-wsr`, a dozen repositories), whose checkpoint chain is the pipeline’s first and largest deployment — the `ws:` goals themselves are workspace-agnostic.
 
 This page explains the machinery end to end: the goal that cuts the checkpoint, the build that produces the `.pkg` and `.msi` installers, and the step that posts the result to Zulip. It is written for two readers — an **operator** who needs to cut a checkpoint, and an **engineer** who needs to understand or change how the pipeline works. Each stage closes with a **Where the machinery lives** note pointing into the source.
 
