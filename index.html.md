@@ -46,7 +46,7 @@ Shared, enforced-zero-dependency value types for the IKE Network: ConstantBacked
 
 Workspace management, release orchestration, gitflow workflows, and build-time utilities for IKE Network projects.
 
-| Version | 251 |
+| Version | 252 |
 | --- | --- |
 | Site | [ike.network/ike-tooling](https://ike.network/ike-tooling/)[8] |
 | GitHub | [IKE-Network/ike-tooling](https://github.com/IKE-Network/ike-tooling)[9] |
@@ -66,7 +66,7 @@ Workspace management, release orchestration, gitflow workflows, and build-time u
 
 Documentation plumbing for the IKE Network. Hosts the ike-doc-maven-plugin (ike-doc packaging, AsciiDoc/render pipeline, PDF dispatch), the Koncept AsciiDoc extension, DocBook XSL + fonts, shared doc resources, and the semantic linebreak reformatter. Split from ike-pipeline to resolve the extensions=true reactor-load cycle. See IKE-Network/ike-issues#216.
 
-| Version | 106 |
+| Version | 107 |
 | --- | --- |
 | Site | [ike.network/ike-docs](https://ike.network/ike-docs/)[11] |
 | GitHub | [IKE-Network/ike-docs](https://github.com/IKE-Network/ike-docs)[12] |
@@ -110,7 +110,7 @@ Maven 4 build extension that implements the IKE typed-marker family for version-
 
 Consumer-facing parent POM, BOM, and workspace management plugin for the IKE Network. External doc and code projects inherit from ike-parent (declared here); cross-repo workspace operations use ike-workspace-maven-plugin (ws:* goals). Consumes ike-docs as an external artifact — ike-parent declares ike-doc-maven-plugin with extensions=true, resolving from Nexus at project-load time. Split from the archived ike-pipeline; see IKE-Network/ike-issues#216.
 
-| Version | 174 |
+| Version | 175 |
 | --- | --- |
 | Site | [ike.network/ike-platform](https://ike.network/ike-platform/)[20] |
 | GitHub | [IKE-Network/ike-platform](https://github.com/IKE-Network/ike-platform)[21] |
