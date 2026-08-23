@@ -1,0 +1,27 @@
+// IKE Project Registration Fragment
+// Managed by ike:site-publish — do not edit manually.
+//
+// project-id: ike-lease
+// project-version: 5
+// project-url: https://ike.network/ike-lease/
+// github-url: https://github.com/IKE-Network/ike-lease
+// registered: 2026-08-23T04:23:59.063144Z
+
+= IKE Working-Set Leases
+
+Single-writer working-set leases across Syncthing-paired machines:
+        the protocol and materializer core (a plain-Java library the ws:
+        goals can consume), and the IntelliJ enforcement plugin that hosts
+        it at the open gesture. Split per IKE-Network/ike-issues#1067.
+
+[cols="1,2",options="autowidth"]
+|===
+| Version | 5
+| Site | https://ike.network/ike-lease/[ike.network/ike-lease]
+| GitHub | https://github.com/IKE-Network/ike-lease[IKE-Network/ike-lease]
+|===
+
+=== Modules
+
+* ike-lease-core
+* ike-lease-plugin
