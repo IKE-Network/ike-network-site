@@ -1,0 +1,21 @@
+// IKE Project Registration Fragment
+// Managed by ike:site-publish — do not edit manually.
+//
+// project-id: ike-knowledge-provider
+// project-version: 6
+// project-url: https://ike.network/ike-knowledge-provider/
+// github-url: https://github.com/IKE-Network/ike-knowledge-provider
+// registered: 2026-09-23T21:53:12.946304Z
+
+= IKE Knowledge Provider
+
+Chronology-store implementation of the IKE knowledge-pipeline SPI:
+        ServiceLoader providers for export, assembly, bindings, and verification,
+        composing the engine's capability libraries behind the stable IKE contract.
+
+[cols="1,2",options="autowidth"]
+|===
+| Version | 6
+| Site | https://ike.network/ike-knowledge-provider/[ike.network/ike-knowledge-provider]
+| GitHub | https://github.com/IKE-Network/ike-knowledge-provider[IKE-Network/ike-knowledge-provider]
+|===
