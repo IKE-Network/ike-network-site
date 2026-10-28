@@ -2,10 +2,10 @@
 // Managed by ike:site-publish — do not edit manually.
 //
 // project-id: ike-docs
-// project-version: 130
+// project-version: 131
 // project-url: https://ike.network/ike-docs/
 // github-url: https://github.com/IKE-Network/ike-docs
-// registered: 2026-10-26T22:34:45.967140Z
+// registered: 2026-10-28T00:51:03.547676Z
 
 = IKE Docs
 
@@ -20,7 +20,7 @@ Documentation plumbing for the IKE Network. Hosts the
 
 [cols="1,2",options="autowidth"]
 |===
-| Version | 130
+| Version | 131
 | Site | https://ike.network/ike-docs/[ike.network/ike-docs]
 | GitHub | https://github.com/IKE-Network/ike-docs[IKE-Network/ike-docs]
 |===
