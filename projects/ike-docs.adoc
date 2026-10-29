@@ -2,10 +2,10 @@
 // Managed by ike:site-publish — do not edit manually.
 //
 // project-id: ike-docs
-// project-version: 132
+// project-version: 133
 // project-url: https://ike.network/ike-docs/
 // github-url: https://github.com/IKE-Network/ike-docs
-// registered: 2026-10-28T14:17:11.118875Z
+// registered: 2026-10-29T16:07:16.917687Z
 
 = IKE Docs
 
@@ -20,7 +20,7 @@ Documentation plumbing for the IKE Network. Hosts the
 
 [cols="1,2",options="autowidth"]
 |===
-| Version | 132
+| Version | 133
 | Site | https://ike.network/ike-docs/[ike.network/ike-docs]
 | GitHub | https://github.com/IKE-Network/ike-docs[IKE-Network/ike-docs]
 |===
@@ -32,6 +32,7 @@ Documentation plumbing for the IKE Network. Hosts the
 * docbook-xsl
 * koncept-core
 * koncept-asciidoc-extension
+* typst-asciidoc-converter
 * ike-doc-maven-plugin
 * semantic-linebreak
 * ike-doc-ingest
