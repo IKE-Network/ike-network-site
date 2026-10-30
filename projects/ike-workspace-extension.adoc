@@ -2,10 +2,10 @@
 // Managed by ike:site-publish — do not edit manually.
 //
 // project-id: ike-workspace-extension
-// project-version: 15
+// project-version: 16
 // project-url: https://ike.network/ike-workspace-extension/
 // github-url: https://github.com/IKE-Network/ike-workspace-extension
-// registered: 2026-10-21T20:10:02.239839Z
+// registered: 2026-10-30T19:21:19.523945Z
 
 = IKE Workspace Extension
 
@@ -18,7 +18,7 @@ Maven 4 build extension that prunes non-existent &lt;subprojects&gt;
 
 [cols="1,2",options="autowidth"]
 |===
-| Version | 15
+| Version | 16
 | Site | https://ike.network/ike-workspace-extension/[ike.network/ike-workspace-extension]
 | GitHub | https://github.com/IKE-Network/ike-workspace-extension[IKE-Network/ike-workspace-extension]
 |===
